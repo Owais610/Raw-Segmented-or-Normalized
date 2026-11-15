@@ -58,3 +58,7 @@ Optional native ONNX mask regeneration is included as visible code, but no new m
 Licensed images, model weights and large embedding/map arrays remain external assets as documented in [ASSETS.md](ASSETS.md). The repository does not claim that those restricted or large assets are publicly downloadable here.
 
 Final publication checks found no broken local links, author-machine paths or private path columns. The package includes 16 notebooks, 30 original histories and 73 statistical/history figures. Staged history/curve files and frozen allocation/exclusion records were checked byte-for-byte. `.gitattributes` preserves these records across operating systems; `.gitignore` was checked against private images, checkpoints and new output paths. The new repository's existing license is preserved.
+
+## Imports layout — PASS
+
+All imports, including plotting-helper imports, are now collected in the first code cell of each of the 16 notebooks. Existing effective import bindings are preserved. An AST comparison confirms that existing calculations and configurations are unchanged; the only additional function check reports a missing optional ONNX Runtime dependency before explicit native-mask generation. Cached workflows were checked without that optional dependency. All 16 notebooks executed successfully again in fresh kernels in default inspection mode, with no training or new recognition inference. Saved results, histories and protocol data are unchanged.

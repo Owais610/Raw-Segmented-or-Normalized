@@ -55,7 +55,7 @@ E2 `evaluation_inventory.parquet` contains **evaluation-only** original test/ext
 
 Native Worldcoin masks use [iris-semantic-segmentation](https://huggingface.co/Worldcoin/iris-semantic-segmentation), independent probability channels in order eyeball/iris/pupil/eyelashes, linear probability interpolation to native dimensions, then threshold >0.5. Annulus = iris AND NOT pupil; visible iris also removes eyelashes. The notebooks load the original masks directly; supplying a newer model or refitting masks would change the experiment.
 
-The segmented/polar and E2 notebooks also contain the original native-mask input preparation, probability thresholding and explicit ONNX session implementation. It is never invoked silently. Optional regeneration requires the original `iris_semseg_upp_scse_mobilenetv2.onnx` asset and original ONNX Runtime environment (`onnxruntime-gpu==1.26.0`, installed separately); cached-mask execution does not import ONNX Runtime. Keep original provider settings and compare regenerated outputs to the frozen masks before using any new cache.
+All imports are collected in the first code cell of each notebook. The segmented/polar and E2 notebooks also contain the original native-mask input preparation, probability thresholding and explicit ONNX session implementation. It is never invoked silently. Optional regeneration requires the original `iris_semseg_upp_scse_mobilenetv2.onnx` asset and original ONNX Runtime environment (`onnxruntime-gpu==1.26.0`, installed separately). The imports cell treats ONNX Runtime as optional; cached-mask workflows run without it, and explicit native-mask generation stops with an actionable error if it is unavailable. Keep original provider settings and compare regenerated outputs to the frozen masks before using any new cache.
 
 Cartesian preprocessing is whole-frame, aspect-preserving 320×320, `INTER_AREA` image resizing, Python-rounded content dimensions, centered black padding, and `INTER_NEAREST_EXACT` binary support resizing. B1/B2 preserve these coordinates. There is no iris-centered crop or second cache resize.
 
@@ -76,6 +76,6 @@ For E2-C/E2-D/E2-E, optional intervention embeddings are direct external assets 
 ## Installation and execution
 
 Use Python 3.11. Install a PyTorch/torchvision CUDA build appropriate for the machine, then `python -m pip install -r requirements.txt`. Select that environment as the Jupyter kernel. No notebook installs packages or silently changes precision/device.
-Open any notebook, configure its first cell, and run cells top-to-bottom within that notebook. You need not execute any other notebook. Default switches display completed records; explicit opt-in starts the selected reproduction workload.
+Open any notebook, run its imports cell, and edit the configuration cell that follows. Run subsequent cells top-to-bottom within that notebook. You need not execute any other notebook. Default switches display completed records; explicit opt-in starts the selected reproduction workload.
 
 New outputs must be outside recorded `Training Histories` and `Results`. `.gitignore` excludes private data, model files, embedding arrays and reproduction directories. Do not commit executed biometric displays.

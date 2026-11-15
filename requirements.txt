@@ -1,6 +1,6 @@
 # Install the matching CUDA-enabled PyTorch wheels explicitly for your machine.
 # This file does not install anything automatically when a notebook executes.
-# Cached-representation notebook workflow; ONNX segmentation is not imported.
+# ONNX Runtime is optional; cached-representation workflows do not require it.
 torch==2.11.0
 torchvision==0.26.0
 timm==1.0.22

@@ -53,7 +53,7 @@ Subject partitions use **dataset + subject**. Iris identities use **dataset + su
 
 1. Create a Python 3.11 environment and install [requirements.txt](requirements.txt), choosing the appropriate PyTorch CUDA build for your system.
 2. Obtain the licensed datasets and documented caches/checkpoints in [ASSETS.md](ASSETS.md). Biometric images, weights and large embedding caches are not committed.
-3. Open the desired notebook and edit its first configuration cell. For a copied notebook, set the asset and recorded-result paths explicitly.
+3. Open the desired notebook, run the imports cell at the top, and edit the configuration cell that follows. For a copied notebook, set the asset and recorded-result paths explicitly.
 4. Run all cells to inspect definitions and recorded results. Enable its training or analysis switch only when ready. Every notebook defaults to **no training and no new recognition inference**.
 
 New outputs go to a fresh, configurable `reproduced_outputs/` directory. Completed records are read-only inputs and are never overwritten.
