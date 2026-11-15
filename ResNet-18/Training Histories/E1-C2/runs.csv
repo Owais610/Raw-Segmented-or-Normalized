@@ -1,0 +1,4 @@
+architecture,condition,seed,best_epoch,completed_epoch,status,best_macro_validation_eer,run_id
+ResNet-18,E1-C2,123,23,48,early_stopped,0.02001984652378242,149f01091ba941ad83cab9afece8b442
+ResNet-18,E1-C2,2025,43,68,early_stopped,0.01830917247518236,5fdcf3f4977148279798ed6b7814f8f5
+ResNet-18,E1-C2,42,55,80,early_stopped,0.01877767137389005,b5be3a7fb8484ccbb1e0daa9ea4eb786

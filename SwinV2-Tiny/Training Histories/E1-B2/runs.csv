@@ -1,0 +1,4 @@
+architecture,condition,seed,best_epoch,completed_epoch,status,best_macro_validation_eer,run_id
+SwinV2-Tiny,E1-B2,123,22,47,early_stopped,0.0112662791063063,138b3c15a1a04d12b0eeb3eab9f2db4b
+SwinV2-Tiny,E1-B2,2025,43,68,early_stopped,0.013121087572014222,2e69120d3c584e91afe738dbce511ea9
+SwinV2-Tiny,E1-B2,42,57,82,early_stopped,0.01164682242083389,8d2e223d22344a61b3de5dcd33075cdf

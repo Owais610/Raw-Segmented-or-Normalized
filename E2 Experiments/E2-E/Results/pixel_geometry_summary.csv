@@ -1,0 +1,6 @@
+dataset,images,b1_max_tensor_error,b2_max_tensor_error,b1_mixed_native_fraction_median,b2_mixed_native_fraction_median,complement_mixed_native_fraction_median,complement_reliable_images
+AMF,523,0.0,0.0,0.017745400205473057,0.018656040572360078,0.0029490616621983914,523
+CASIA-Interval,395,0.0,0.0,0.0,0.0,0.0,395
+CUST-Iris,427,0.0,0.0,0.016489734332057984,0.018146286990508097,0.004015358747208071,427
+IITD,308,0.0,0.0,0.0,0.0,0.0,308
+UTIRIS_NIR,770,0.0,0.0,0.027052655852452395,0.03139223970765566,0.007108724853005877,770

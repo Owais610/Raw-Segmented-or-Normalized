@@ -1,0 +1,12 @@
+# Preserve frozen scientific records byte-for-byte on every operating system.
+*.json -text
+*.jsonl -text
+*.csv -text
+*.parquet binary
+*.png binary
+# Keep notebook/document source portable.
+*.ipynb text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

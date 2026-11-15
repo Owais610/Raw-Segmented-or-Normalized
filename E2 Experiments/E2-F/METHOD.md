@@ -1,0 +1,13 @@
+# Pair-conditioned Grad-CAM method
+
+Use the six original frozen raw-trained checkpoints. Per dataset select 12 subject-distinct genuine pairs, 12 subject-disjoint ordinary impostors and six subject-disjoint high-similarity impostors. High candidates rank by mean average-tie impostor percentile across all six models, descending then pair ID; ordinary/genuine selections use original SHA-derived deterministic RNG seeds based on selection seed 42. The high-similarity category is outcome-conditioned and exploratory. The exact fixed selections are public data inputs, and full selection reconstruction is in the notebook.
+
+Use the full normalized-embedding cosine as scalar target, differentiating both image branches of one shared encoder in FP32. ResNet target is backbone.layer4 (NCHW); Swin target is backbone.model.norm (NHWC). Both native grids are 10×10. Mean spatial gradients form channel weights, then channel-weighted activation sum, positive ReLU, bilinear resize to 320×320 (align_corners=False), and L1 positive-mass normalization over nonpadding content. Zero/nonfinite/unsupported maps remain visible in coverage.
+
+Report annulus, pupil, outside-disc and nonannulus area/mass fractions, per-pixel density and area enrichment. Nonannulus=pupil ∪ outside-disc. Pair branches and repeated images are aggregated explicitly; architecture contrasts are ResNet−Swin on supported matched branches. No coarse-grid attribution is interpreted as texture-scale localization.
+
+Projection, late-stage+projection and full parameter randomizations use fixed original distributions/seeds in independent in-memory copies. Changed parameter coverage and unchanged original state are checked. Two fixed pairs/category support these controls. Three genuine anchors/domain also receive fixed impostor partners, with original activations checked. Spatial Pearson/Spearman/cosine/total variation are graded diagnostics, not pass/fail faithfulness criteria.
+
+The saved-AMP versus attribution-FP32 score agreement tolerance remains 0.001; same-precision tolerance is 1e−6. Original exceptions are retained and unsupported in primary paired summaries. Numerical replay reconstructs original full inference batches under AMP and FP32 without relaxing tolerance, altering support flags or creating new maps. Never replace failed maps with another layer or algorithm.
+
+Private figures use the original fixed density scale 0..4 and overlay alpha 0.45; all pairs/seeds are available for local rendering. Summary plots in this release contain numerical attribution statistics, not biometric images. Grad-CAM does not establish causal identity reliance or an architecture's universal anatomical preference.

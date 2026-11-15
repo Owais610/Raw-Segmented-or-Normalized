@@ -1,0 +1,129 @@
+{
+  "dataset_scope": [
+    "CUST-Iris",
+    "CASIA-Interval",
+    "IITD"
+  ],
+  "excluded_images": [
+    {
+      "image_id": "IITD:001_01_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_02_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_03_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_04_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_05_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_06_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_06_R",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_07_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_07_R",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_08_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_08_R",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_09_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_09_R",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_10_L",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:001_10_R",
+      "reason": "quarantined_subject"
+    },
+    {
+      "image_id": "IITD:018_08_R",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:018_07_R"
+    },
+    {
+      "image_id": "IITD:038_02_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:038_01_L"
+    },
+    {
+      "image_id": "IITD:111_02_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:111_01_L"
+    },
+    {
+      "image_id": "IITD:128_10_R",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:128_09_R"
+    },
+    {
+      "image_id": "IITD:140_09_R",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:140_08_R"
+    },
+    {
+      "image_id": "IITD:150_02_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:150_01_L"
+    },
+    {
+      "image_id": "IITD:185_10_R",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:185_09_R"
+    },
+    {
+      "image_id": "IITD:207_06_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:207_05_L"
+    },
+    {
+      "image_id": "IITD:212_06_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:212_05_L"
+    },
+    {
+      "image_id": "IITD:213_07_L",
+      "reason": "excluded_exact_duplicate",
+      "retained_image_id": "IITD:213_06_L"
+    }
+  ],
+  "excluded_subjects": [
+    {
+      "dataset": "IITD",
+      "expected_images": 15,
+      "reason": "quarantined_subject",
+      "subject_id": "001"
+    }
+  ],
+  "metadata_inventory_sha256": "3cb4c1b2508df0436822bb63ecf325126f42fa90543c5eaaa6a9ac01243c1b46",
+  "schema_version": 1
+}

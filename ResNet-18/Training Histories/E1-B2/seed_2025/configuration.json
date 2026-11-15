@@ -1,0 +1,76 @@
+{
+  "augmentation": {
+    "enabled": true,
+    "probability": 0.5,
+    "brightness": 0.1,
+    "contrast": 0.1,
+    "horizontal_flip": false,
+    "random_erasing": false,
+    "geometric_transforms": false
+  },
+  "sampler": {
+    "identities_per_domain": 4,
+    "captures_per_identity": 2,
+    "batch_size": 24,
+    "batches_per_epoch": 224
+  },
+  "objective": {
+    "triplet_margin": 0.3,
+    "supcon_temperature": 0.07,
+    "supcon_weight": 0.5
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "gradient_clip_norm": 5.0
+  },
+  "runtime": {
+    "device": "cuda",
+    "amp": true,
+    "amp_dtype": "float16",
+    "grad_scaler_init_scale": 1024.0,
+    "deterministic_algorithms": true,
+    "num_workers": 0,
+    "validation_batch_size": 24,
+    "offline_pretrained": true
+  },
+  "schedule": {
+    "max_epochs": 150,
+    "min_epochs": 30,
+    "validation_frequency": 1,
+    "early_stopping_patience": 25,
+    "improvement_tolerance": 0.0001,
+    "selection": "macro_validation_eer"
+  },
+  "validation": {
+    "all_genuine_pairs": true,
+    "all_primary_impostor_pairs": true,
+    "score_chunk_size": 65536,
+    "evaluation_augmentation": false,
+    "evaluate_test": false
+  },
+  "logging": {
+    "jsonl": "history.jsonl",
+    "curves": "curves.png",
+    "write_curves_every_epoch": true
+  },
+  "architecture": {
+    "name": "resnet18.a1_in1k"
+  },
+  "data": {
+    "normalization_scope": "pk_eligible_training",
+    "representation": "visible_iris"
+  },
+  "seed": 2025,
+  "architecture_label": "ResNet-18",
+  "condition": "E1-B2",
+  "normalization": {
+    "mean": 0.48287347719744544,
+    "std": 0.2741831329802273
+  }
+}

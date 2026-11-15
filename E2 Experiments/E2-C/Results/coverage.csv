@@ -1,0 +1,6 @@
+dataset,images,genuine,impostor,opposite_eye_diagnostic
+CUST-Iris,427,634,89473,844
+CASIA-Interval,395,1353,75272,1190
+IITD,308,628,45936,714
+AMF,523,1015,134214,1274
+UTIRIS_NIR,770,1544,292613,1908

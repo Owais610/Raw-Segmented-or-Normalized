@@ -1,0 +1,96 @@
+{
+  "augmentation": {
+    "brightness": 0.1,
+    "contrast": 0.1,
+    "enabled": true,
+    "geometric_transforms": false,
+    "horizontal_flip": false,
+    "probability": 0.5,
+    "random_erasing": false
+  },
+  "sampler": {
+    "batch_size": 24,
+    "batches_per_epoch": 224,
+    "captures_per_identity": 2,
+    "identities_per_domain": 4
+  },
+  "objective": {
+    "supcon_temperature": 0.07,
+    "supcon_weight": 0.5,
+    "triplet_margin": 0.3
+  },
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "gradient_clip_norm": 5.0,
+    "lr": 0.0001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "runtime": {
+    "amp": true,
+    "amp_dtype": "float16",
+    "deterministic_algorithms": true,
+    "device": "cuda",
+    "grad_scaler_init_scale": 1024.0,
+    "num_workers": 0,
+    "offline_pretrained": true,
+    "validation_batch_size": 24
+  },
+  "schedule": {
+    "early_stopping_patience": 25,
+    "improvement_tolerance": 0.0001,
+    "max_epochs": 150,
+    "min_epochs": 30,
+    "selection": "macro_validation_eer",
+    "validation_frequency": 1
+  },
+  "validation": {
+    "all_genuine_pairs": true,
+    "all_primary_impostor_pairs": true,
+    "evaluate_test": false,
+    "evaluation_augmentation": false,
+    "score_chunk_size": 65536
+  },
+  "logging": {
+    "curves": "curves.png",
+    "jsonl": "history.jsonl",
+    "write_curves_every_epoch": true
+  },
+  "architecture": {
+    "name": "swinv2_tiny_window8_256",
+    "pretrained_tag": "ms_in1k",
+    "pretrained": true,
+    "in_chans": 1,
+    "num_classes": 0,
+    "global_pool": "avg",
+    "strict_img_size": false,
+    "outer_input_shape_guard": true,
+    "feature_dim": 768,
+    "projection_hidden_dim": 512,
+    "embedding_dim": 256,
+    "full_fine_tune": true,
+    "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+    "attention_precision": "float32",
+    "attention_precision_scope": "all_12_window_attention_modules",
+    "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+    "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+    "input_size": [
+      320,
+      320
+    ]
+  },
+  "data": {
+    "normalization_scope": "pk_eligible_training",
+    "representation": "visible_iris"
+  },
+  "seed": 123,
+  "architecture_label": "SwinV2-Tiny",
+  "condition": "E1-B2",
+  "normalization": {
+    "mean": 0.48287347719744544,
+    "std": 0.2741831329802273
+  }
+}

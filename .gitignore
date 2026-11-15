@@ -1,0 +1,35 @@
+# Restricted image assets, learned weights and new reproduction outputs
+data/
+assets_private/
+outputs/
+reproduced_outputs/
+**/reproduced_outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bmp
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.png
+!ResNet-18/Training Histories/**/curves.png
+!SwinV2-Tiny/Training Histories/**/curves.png
+!E2 Experiments/**/Results/Figures/*.png
+*.npy
+*.npz
+# Jupyter/environment/editor caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.tmp
+*.lock
