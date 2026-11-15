@@ -39,7 +39,7 @@ E2-D preserves its original matched **feasible-occlusion** cohort across all its
 
 CUST-Iris, CASIA-Interval and IITD use the original held-out test subjects. AMF and UTIRIS NIR are independent external zero-shot datasets; none of their subjects enters training or checkpoint selection. Results are calculated independently within each dataset.
 
-    | Dataset | Images | Subjects | Physical eyes | Genuine | Different-subject impostors | Opposite-eye diagnostic |
+| Dataset | Images | Subjects | Physical eyes | Genuine | Different-subject impostors | Opposite-eye diagnostic |
 | --- | --- | --- | --- | --- | --- | --- |
 | CUST-Iris | 427 | 54 | 108 | 634 | 89473 | 844 |
 | CASIA-Interval | 395 | 37 | 59 | 1353 | 75272 | 1190 |
