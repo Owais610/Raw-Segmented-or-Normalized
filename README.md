@@ -31,6 +31,7 @@ Per-condition **matched** results are also linked from each architecture README.
 | E2-D | Matched-area iris/periocular partial occlusion | [Notebook](E2%20Experiments/E2-D/E2-D.ipynb) | [Report](E2%20Experiments/E2-D/REPORT.md) | [Tables / figures](E2%20Experiments/E2-D/Results) |
 | E2-E | Raw-trained iris-only and complementary inputs | [Notebook](E2%20Experiments/E2-E/E2-E.ipynb) | [Report](E2%20Experiments/E2-E/REPORT.md) | [Tables / figures](E2%20Experiments/E2-E/Results) |
 | E2-F | Pair-conditioned Grad-CAM | [Notebook](E2%20Experiments/E2-F/E2-F.ipynb) | [Report](E2%20Experiments/E2-F/REPORT.md) | [Tables / figures](E2%20Experiments/E2-F/Results) |
+| E2-G | Binary segmentation geometry in frozen B1/B2 models | [Notebook](E2%20Experiments/E2-G/E2-G.ipynb) | [Report](E2%20Experiments/E2-G/REPORT.md) | [Tables / figures](E2%20Experiments/E2-G/Results) |
 
 These analyses were developed after the initial architecture–representation results, with existing checkpoints and preprocessing held fixed. They describe matched comparisons, input sensitivity and spatial attribution; they do not establish causal shortcut use.
 E2-D preserves its original matched **feasible-occlusion** cohort across all its controls; its geometry-based coverage is reported separately from the common five-representation population.

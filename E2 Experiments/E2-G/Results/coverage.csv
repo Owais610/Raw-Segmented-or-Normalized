@@ -1,0 +1,6 @@
+dataset,images,subjects,iris_ids,left,right,genuine,impostor,opposite_eye_diagnostic,b1_empty,b2_empty,all_native_masks_exact,all_b2_subset_b1
+CUST-Iris,427,54,108,212,215,634,89473,844,0,0,True,True
+CASIA-Interval,395,37,59,200,195,1353,75272,1190,0,0,True,True
+IITD,308,32,63,164,144,628,45936,714,0,0,True,True
+AMF,523,54,108,262,261,1015,134214,1274,0,0,True,True
+UTIRIS_NIR,770,79,158,388,382,1544,292613,1908,0,0,True,True

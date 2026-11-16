@@ -18,3 +18,5 @@ Each history folder contains `runs.csv`, validation metric tables, and `seed_42/
 The result folders contain the agreed common-population evaluation only; [E2-A](../E2%20Experiments/E2-A/README.md) contains the complete evaluation implementation and cross-architecture comparisons.
 
 See [asset setup](../ASSETS.md), [executed checks](../VALIDATION.md) and [project navigation](../README.md).
+
+Frozen B1/B2 models are also tested with binary mask geometry only in **[E2-G](../E2%20Experiments/E2-G/REPORT.md)**; all three seeds and matched datasets are retained.

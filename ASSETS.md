@@ -1,6 +1,6 @@
 # Assets and execution
 
-All scientific implementation code is inside the 16 notebooks. Real data, pretrained weights, learned checkpoints and large saved embeddings are external assets, bound by editable paths in each notebook. Missing required assets cause explicit errors; there is no random-weight, substitute-data or relaxed-eligibility fallback.
+All scientific implementation code is inside the 17 notebooks. Real data, pretrained weights, learned checkpoints and large saved embeddings are external assets, bound by editable paths in each notebook. Missing required assets cause explicit errors; there is no random-weight, substitute-data or relaxed-eligibility fallback.
 
 ## Dataset access
 
@@ -37,7 +37,7 @@ data/
     swinv2_tiny_window8_256.ms_in1k.safetensors
   checkpoints/<architecture>/<E1-condition>/seed_<seed>/best.pt
   original_embeddings/<internal|AMF|UTIRIS_NIR>/<job-name>.npz
-  intervention_embeddings/<E2-C|E2-D|E2-E>/<dataset>/<job-name>/<variant>.npz
+  intervention_embeddings/<E2-C|E2-D|E2-E|E2-G>/<dataset>/<job-name>/<variant>.npz
 ```
 
 Actual files can be stored elsewhere; edit each notebook's paths or explicit `PATH_REMAP`. Paths inside the portable metadata may be relative to `DATA_ROOT`.
@@ -79,3 +79,7 @@ Use Python 3.11. Install a PyTorch/torchvision CUDA build appropriate for the ma
 Open any notebook, run its imports cell, and edit the configuration cell that follows. Run subsequent cells top-to-bottom within that notebook. You need not execute any other notebook. Default switches display completed records; explicit opt-in starts the selected reproduction workload.
 
 New outputs must be outside recorded `Training Histories` and `Results`. `.gitignore` excludes private data, model files, embedding arrays and reproduction directories. Do not commit executed biometric displays.
+
+## E2-G binary-input assets
+
+E2-G uses the existing B1/B2 320×320 binary support files and matched populations; no new image preprocessing asset is required. Optional completed binary embeddings use `intervention_embeddings/E2-G/<dataset>/<job-name>/binary_geometry.npz`, with `image_ids` in the exact published matched-membership order and float32 unit-normalized `embeddings` [N,256]. The private original output is `<dataset>/runs/<job-name>/binary_geometry/embeddings.npz`; copy it explicitly to the configured asset location if desired. These caches are not outputs required from another notebook. Original grayscale baselines reuse the unchanged full-population E1 embedding assets, whose inference order differs from the matched-only binary inference order. Masks, grayscale previews, checkpoints, embeddings and pair scores are not committed.
