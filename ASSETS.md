@@ -1,6 +1,8 @@
 # Assets and execution
 
-All scientific implementation code is inside the 17 notebooks. Real data, pretrained weights, learned checkpoints and large saved embeddings are external assets, bound by editable paths in each notebook. Missing required assets cause explicit errors; there is no random-weight, substitute-data or relaxed-eligibility fallback.
+Scientific implementations are visible inside the 22 notebooks; E3 also includes a CPU-only numerical/table verification script and unit tests. Real data, pretrained weights, learned checkpoints and large saved embeddings are external assets, bound by editable paths in each notebook. Missing required assets cause explicit errors; there is no random-weight, substitute-data or relaxed-eligibility fallback.
+
+E3 uses the existing frozen Cartesian binary-support caches and the same metadata, partitions and pair files. Its twelve independently trained checkpoints have a separate [index](Assets/e3_checkpoints.json); their expected paths and embedding-cache layout are documented in the [E3 asset instructions](E3%20Experiments/README.md#asset-setup). The original E1 index and assets are unchanged. E3 reads no ocular grayscale intensities and performs no mask regeneration.
 
 ## Dataset access
 

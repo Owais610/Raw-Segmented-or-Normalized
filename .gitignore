@@ -18,6 +18,7 @@ reproduced_outputs/
 !ResNet-18/Training Histories/**/curves.png
 !SwinV2-Tiny/Training Histories/**/curves.png
 !E2 Experiments/**/Results/Figures/*.png
+!E3 Experiments/Training Histories/**/curves.png
 *.npy
 *.npz
 # Jupyter/environment/editor caches

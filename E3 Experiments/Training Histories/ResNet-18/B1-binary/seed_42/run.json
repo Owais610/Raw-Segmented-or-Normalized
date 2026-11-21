@@ -1,0 +1,14 @@
+{
+  "architecture": "ResNet-18",
+  "best_epoch": 83,
+  "checkpoint_sha256": "0cdc37ae53ecaa55e88c1059bd3b93a748249d76f10edd2df2fee0585d62f4e1",
+  "completed_epoch": 108,
+  "condition": "B1-binary",
+  "macro_validation_eer": 0.0630910500251736,
+  "name": "b1_binary_resnet18_seed42",
+  "seed": 42,
+  "status": "early_stopped",
+  "run_id": "0ead018011af46b39f16389a429760b7",
+  "history_sha256": "5a0d1a2e764adba923715a9b1ba57f0132875ae7e366cf20371109140bf88ac9",
+  "curves_sha256": "461256fba267a05bac7000117f536d8cab877884f0e6966d27de661b845aa97e"
+}

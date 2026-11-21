@@ -1,0 +1,82 @@
+% Requires booktabs and multirow. G is segmented grayscale B1/B2, not raw ocular A.
+% Both inserts retain ordinary manuscript numbering; preview starts at Table VII.
+
+\begin{table*}[!t]
+\centering
+\caption{Grayscale and binary-mask training/test comparison: EER (\%, lower is better).}
+\label{tab:e3-gray-mask-eer}
+\begingroup
+\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllccccc@{}}
+\toprule
+& & & \multicolumn{3}{c}{Internal held-out test} & \multicolumn{2}{c}{External zero-shot} \\
+\cmidrule(lr){4-6}\cmidrule(l){7-8}
+Support & Architecture & Train $\to$ test & CUST-Iris & CASIA-Interval & IITD & AMF & UTIRIS-NIR \\
+\midrule
+\multirow{6}{*}{B1} & \multirow{3}{*}{ResNet-18} & G$\to$G & {\boldmath $1.34\pm0.21$} & {\boldmath $2.78\pm0.35$} & $1.07\pm0.25$ & {\boldmath $1.64\pm0.28$} & {\boldmath $6.64\pm0.35$} \\
+ &  & G$\to$M & {\boldmath $15.98\pm0.37$} & {\boldmath $18.57\pm1.28$} & {\boldmath $5.75\pm0.33$} & {\boldmath $10.14\pm0.57$} & {\boldmath $20.14\pm0.85$} \\
+ &  & M$\to$M & {\boldmath $7.43\pm0.65$} & {\boldmath $9.88\pm0.48$} & {\boldmath $1.82\pm0.64$} & {\boldmath $10.86\pm1.10$} & {\boldmath $18.04\pm2.65$} \\
+\cmidrule(lr){2-8}
+ & \multirow{3}{*}{SwinV2-Tiny} & G$\to$G & $1.54\pm0.21$ & $3.23\pm0.53$ & {\boldmath $0.93\pm0.51$} & $1.79\pm0.58$ & $6.72\pm1.23$ \\
+ &  & G$\to$M & $31.02\pm3.99$ & $38.63\pm2.60$ & $27.71\pm3.87$ & $25.78\pm4.34$ & $40.40\pm1.98$ \\
+ &  & M$\to$M & $9.81\pm0.43$ & $12.32\pm1.30$ & $2.45\pm0.63$ & $11.09\pm1.97$ & $18.89\pm0.78$ \\
+\midrule
+\multirow{6}{*}{B2} & \multirow{3}{*}{ResNet-18} & G$\to$G & {\boldmath $1.42\pm0.34$} & $3.86\pm1.57$ & $1.32\pm0.79$ & $1.53\pm0.29$ & $7.30\pm0.42$ \\
+ &  & G$\to$M & {\boldmath $15.64\pm0.63$} & {\boldmath $13.19\pm0.70$} & {\boldmath $4.13\pm0.43$} & {\boldmath $9.61\pm0.91$} & {\boldmath $19.24\pm0.66$} \\
+ &  & M$\to$M & {\boldmath $7.89\pm0.27$} & {\boldmath $8.47\pm0.36$} & {\boldmath $2.38\pm0.32$} & {\boldmath $8.87\pm1.00$} & {\boldmath $18.01\pm0.47$} \\
+\cmidrule(lr){2-8}
+ & \multirow{3}{*}{SwinV2-Tiny} & G$\to$G & $2.00\pm0.38$ & {\boldmath $3.30\pm0.69$} & {\boldmath $1.16\pm0.14$} & {\boldmath $1.47\pm0.22$} & {\boldmath $6.29\pm0.52$} \\
+ &  & G$\to$M & $23.69\pm1.26$ & $16.45\pm0.51$ & $11.84\pm2.43$ & $16.16\pm0.77$ & $28.09\pm0.92$ \\
+ &  & M$\to$M & $9.14\pm0.72$ & $9.51\pm0.78$ & $2.66\pm0.38$ & $9.87\pm1.67$ & $19.41\pm0.99$ \\
+\bottomrule
+\end{tabular*}
+\par\vspace{3pt}
+\begin{minipage}{\textwidth}\footnotesize
+Mean $\pm$ sample SD over seeds 42, 123, and 2025. G: grayscale segmented input; M: corresponding binary support.
+G$\to$M reuses the G$\to$G checkpoint; M$\to$M is separately trained with photometric augmentation disabled to preserve binary inputs.
+All rows use identical matched images and exhaustive pairs within each dataset. Bold compares architectures within the same support, train$\to$test case, and dataset.
+\end{minipage}
+\endgroup
+\end{table*}
+
+\begin{table*}[!t]
+\centering
+\caption{Grayscale and binary-mask training/test comparison: TAR at 0.1\% FAR (\%, higher is better).}
+\label{tab:e3-gray-mask-tar001}
+\begingroup
+\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllccccc@{}}
+\toprule
+& & & \multicolumn{3}{c}{Internal held-out test} & \multicolumn{2}{c}{External zero-shot} \\
+\cmidrule(lr){4-6}\cmidrule(l){7-8}
+Support & Architecture & Train $\to$ test & CUST-Iris & CASIA-Interval & IITD & AMF & UTIRIS-NIR \\
+\midrule
+\multirow{6}{*}{B1} & \multirow{3}{*}{ResNet-18} & G$\to$G & {\boldmath $91.17\pm1.10$} & {\boldmath $83.72\pm2.09$} & {\boldmath $97.03\pm1.48$} & {\boldmath $91.40\pm2.99$} & {\boldmath $56.50\pm3.80$} \\
+ &  & G$\to$M & {\boldmath $14.88\pm0.92$} & {\boldmath $8.35\pm1.41$} & {\boldmath $50.37\pm3.95$} & {\boldmath $30.41\pm1.51$} & {\boldmath $5.92\pm0.88$} \\
+ &  & M$\to$M & {\boldmath $38.96\pm4.02$} & {\boldmath $27.69\pm1.34$} & {\boldmath $84.93\pm0.40$} & {\boldmath $26.83\pm2.81$} & {\boldmath $11.51\pm2.74$} \\
+\cmidrule(lr){2-8}
+ & \multirow{3}{*}{SwinV2-Tiny} & G$\to$G & $86.80\pm3.41$ & $80.04\pm2.85$ & $96.87\pm1.30$ & $90.28\pm2.12$ & $46.72\pm9.05$ \\
+ &  & G$\to$M & $3.94\pm1.91$ & $2.12\pm1.12$ & $7.80\pm4.22$ & $10.38\pm4.42$ & $0.91\pm0.53$ \\
+ &  & M$\to$M & $26.66\pm2.01$ & $18.28\pm2.32$ & $79.78\pm4.63$ & $22.63\pm7.88$ & $7.71\pm0.47$ \\
+\midrule
+\multirow{6}{*}{B2} & \multirow{3}{*}{ResNet-18} & G$\to$G & {\boldmath $90.27\pm1.58$} & {\boldmath $76.00\pm10.29$} & $93.63\pm6.21$ & {\boldmath $91.00\pm3.83$} & {\boldmath $51.75\pm3.62$} \\
+ &  & G$\to$M & {\boldmath $14.35\pm2.19$} & {\boldmath $13.50\pm4.13$} & {\boldmath $65.34\pm4.47$} & {\boldmath $36.09\pm2.19$} & {\boldmath $7.69\pm0.43$} \\
+ &  & M$\to$M & {\boldmath $35.86\pm3.78$} & {\boldmath $34.81\pm3.63$} & {\boldmath $85.14\pm0.60$} & {\boldmath $35.73\pm4.87$} & {\boldmath $12.41\pm1.62$} \\
+\cmidrule(lr){2-8}
+ & \multirow{3}{*}{SwinV2-Tiny} & G$\to$G & $81.23\pm3.70$ & $72.23\pm11.67$ & {\boldmath $96.13\pm0.88$} & $89.69\pm5.75$ & $47.97\pm2.89$ \\
+ &  & G$\to$M & $5.05\pm1.74$ & $7.96\pm3.25$ & $22.56\pm6.18$ & $16.95\pm2.59$ & $2.89\pm0.91$ \\
+ &  & M$\to$M & $30.97\pm5.04$ & $33.88\pm1.90$ & $78.77\pm3.88$ & $31.72\pm0.77$ & $9.63\pm0.36$ \\
+\bottomrule
+\end{tabular*}
+\par\vspace{3pt}
+\begin{minipage}{\textwidth}\footnotesize
+Mean $\pm$ sample SD over seeds 42, 123, and 2025. G: grayscale segmented input; M: corresponding binary support.
+G$\to$M reuses the G$\to$G checkpoint; M$\to$M is separately trained with photometric augmentation disabled to preserve binary inputs.
+All rows use identical matched images and exhaustive pairs within each dataset. Bold compares architectures within the same support, train$\to$test case, and dataset.
+\end{minipage}
+\endgroup
+\end{table*}

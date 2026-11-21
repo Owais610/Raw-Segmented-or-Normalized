@@ -1,0 +1,7 @@
+dataset,split,retained_images,subjects,iris_ids,pk_eligible_images,pk_eligible_iris_ids,left,right
+CUST-Iris,train,2016,252,504,2016,504,1008,1008
+CASIA-Interval,train,1847,174,276,1831,260,932,915
+IITD,train,1509,152,296,1509,296,793,716
+CUST-Iris,validation,432,54,108,432,108,216,216
+CASIA-Interval,validation,396,38,60,396,60,200,196
+IITD,validation,327,33,64,327,64,173,154

@@ -36,6 +36,12 @@ Per-condition **matched** results are also linked from each architecture README.
 These analyses were developed after the initial architecture–representation results, with existing checkpoints and preprocessing held fixed. They describe matched comparisons, input sensitivity and spatial attribution; they do not establish causal shortcut use.
 E2-D preserves its original matched **feasible-occlusion** cohort across all its controls; its geometry-based coverage is reported separately from the common five-representation population.
 
+## E3: learning directly from binary masks
+
+E3 trains both architectures on the exact B1/B2 binary supports used in E2-G. It compares **grayscale→grayscale (E1)**, **grayscale→binary (E2-G)** and **binary→binary (E3)** on the same five matched populations and exhaustive pairs. All twelve new runs and all three seeds are included. Brightness/contrast augmentation is disabled by approval to keep E3 inputs strictly binary; the remaining E1 protocol is preserved.
+
+Start with the **[E3 overview](E3%20Experiments/README.md)** or **[EER and TAR@0.1% FAR comparison tables](E3%20Experiments/Manuscript%20Tables/ieeetran_preview.pdf)**. The section includes four standalone training notebooks, the evaluation notebook, twelve original training histories/curves, all four seed-level metrics, three-seed summaries and the detailed report. [E3 validation](E3%20Experiments/VALIDATION.md) documents executed checks. Original E1/E2 results remain unchanged.
+
 ## Datasets and primary evaluation population
 
 CUST-Iris, CASIA-Interval and IITD use the original held-out test subjects. AMF and UTIRIS NIR are independent external zero-shot datasets; none of their subjects enters training or checkpoint selection. Results are calculated independently within each dataset.

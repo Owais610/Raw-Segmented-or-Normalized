@@ -1,0 +1,206 @@
+{
+  "all_12_validation_selected_best_checkpoints": true,
+  "best_checkpoints": [
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 83,
+      "checkpoint_sha256": "0cdc37ae53ecaa55e88c1059bd3b93a748249d76f10edd2df2fee0585d62f4e1",
+      "completed_epoch": 108,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.0630910500251736,
+      "name": "b1_binary_resnet18_seed42",
+      "seed": 42
+    },
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 41,
+      "checkpoint_sha256": "38b4cb635b672219c5d961c405f7990ec3dcfc4f2e4ab6127c142be53a5d9c65",
+      "completed_epoch": 66,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.06905981623865765,
+      "name": "b1_binary_resnet18_seed123",
+      "seed": 123
+    },
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 53,
+      "checkpoint_sha256": "bbb13d74f513a708e71b3f02b8f61185f42b3e7903a08dd259b178eac68341b3",
+      "completed_epoch": 78,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.06735187444920858,
+      "name": "b1_binary_resnet18_seed2025",
+      "seed": 2025
+    },
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 34,
+      "checkpoint_sha256": "9e7d31c6e5b6ad3c58916ab36b5701f800c84aad592599e86764838e511e0dd2",
+      "completed_epoch": 59,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.05874254763059026,
+      "name": "b2_binary_resnet18_seed42",
+      "seed": 42
+    },
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 49,
+      "checkpoint_sha256": "e0ba375aaf2beac18a6010cc947121543ed10cbe1e790e798bd65b33579383b9",
+      "completed_epoch": 74,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.0597040023197055,
+      "name": "b2_binary_resnet18_seed123",
+      "seed": 123
+    },
+    {
+      "architecture": "ResNet-18",
+      "best_epoch": 24,
+      "checkpoint_sha256": "f2feef2b1e10b4bb3fb1e5953f7ec93673973b025a2284f7d93409e915541e15",
+      "completed_epoch": 49,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.05786599705283054,
+      "name": "b2_binary_resnet18_seed2025",
+      "seed": 2025
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 20,
+      "checkpoint_sha256": "c5a41395c1f3f153ecc899502a98661949672862ecd3e973f20e1f91b804d1e6",
+      "completed_epoch": 45,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.0790071697357077,
+      "name": "b1_binary_swinv2_tiny_seed42",
+      "seed": 42
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 56,
+      "checkpoint_sha256": "8ab92c97139d243b7e01f214bfed5d97c2aa4b552140fb323c67ecbfdf219fda",
+      "completed_epoch": 81,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.08034940515574526,
+      "name": "b1_binary_swinv2_tiny_seed123",
+      "seed": 123
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 68,
+      "checkpoint_sha256": "883dec2ecd482277e1bbafb10f8ecb7785e55d5a8873b4c2c4551b3f8b50c5f0",
+      "completed_epoch": 93,
+      "condition": "B1-binary",
+      "macro_validation_eer": 0.08149262513123862,
+      "name": "b1_binary_swinv2_tiny_seed2025",
+      "seed": 2025
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 76,
+      "checkpoint_sha256": "121043fa3c45f03dfcf44f880a37e8c421a3d4bbdfc7309e4c15f6f24eb4fcd7",
+      "completed_epoch": 101,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.06212392676346351,
+      "name": "b2_binary_swinv2_tiny_seed42",
+      "seed": 42
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 36,
+      "checkpoint_sha256": "1d3b07c342bf504224cb8cbc2d38d2d156501c699e48af208af55129170c3eee",
+      "completed_epoch": 61,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.0644867112675604,
+      "name": "b2_binary_swinv2_tiny_seed123",
+      "seed": 123
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "best_epoch": 79,
+      "checkpoint_sha256": "a826322102fa2600d959f9c1538408f123c9ba59fb7c8ad451216aa7f14a56ec",
+      "completed_epoch": 104,
+      "condition": "B2-binary",
+      "macro_validation_eer": 0.06407608907665514,
+      "name": "b2_binary_swinv2_tiny_seed2025",
+      "seed": 2025
+    }
+  ],
+  "counts": {
+    "best_checkpoints_verified": 12,
+    "checkpoint_validation_scores": 12,
+    "comparison_source_values": 720,
+    "matched_image_embeddings_verified": 29076,
+    "sealed_output_files": 258,
+    "seed_metric_json_values": 240,
+    "summary_values": 3000
+  },
+  "coverage": [
+    {
+      "dataset": "CUST-Iris",
+      "genuine": 634,
+      "images": 427,
+      "impostor": 89473,
+      "iris_ids": 108,
+      "opposite_eye_diagnostic": 844,
+      "subjects": 54
+    },
+    {
+      "dataset": "CASIA-Interval",
+      "genuine": 1353,
+      "images": 395,
+      "impostor": 75272,
+      "iris_ids": 59,
+      "opposite_eye_diagnostic": 1190,
+      "subjects": 37
+    },
+    {
+      "dataset": "IITD",
+      "genuine": 628,
+      "images": 308,
+      "impostor": 45936,
+      "iris_ids": 63,
+      "opposite_eye_diagnostic": 714,
+      "subjects": 32
+    },
+    {
+      "dataset": "AMF",
+      "genuine": 1015,
+      "images": 523,
+      "impostor": 134214,
+      "iris_ids": 108,
+      "opposite_eye_diagnostic": 1274,
+      "subjects": 54
+    },
+    {
+      "dataset": "UTIRIS_NIR",
+      "genuine": 1544,
+      "images": 770,
+      "impostor": 292613,
+      "iris_ids": 158,
+      "opposite_eye_diagnostic": 1908,
+      "subjects": 79
+    }
+  ],
+  "datasets": [
+    "CUST-Iris",
+    "CASIA-Interval",
+    "IITD",
+    "AMF",
+    "UTIRIS_NIR"
+  ],
+  "maximum_absolute_differences": {
+    "checkpoint_validation_scores": 0,
+    "comparison_source_values": 0,
+    "seed_metric_json_values": 0,
+    "summary_values": 1.1102230246251565e-16
+  },
+  "original_results_modified": false,
+  "same_images_and_pairs_as_e1_e2_matched_populations": true,
+  "sd_ddof": 1,
+  "seeds": [
+    42,
+    123,
+    2025
+  ],
+  "status": "passed",
+  "training_or_inference_rerun_during_audit": false,
+  "training_validation_subject_and_iris_overlap": 0,
+  "original_audit_sha256": "dff952474ee52125af033f03440ad2730c3ed1f3bc093437a6e95f1d08168550"
+}

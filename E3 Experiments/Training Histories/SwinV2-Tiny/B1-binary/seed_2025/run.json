@@ -1,0 +1,14 @@
+{
+  "architecture": "SwinV2-Tiny",
+  "best_epoch": 68,
+  "checkpoint_sha256": "883dec2ecd482277e1bbafb10f8ecb7785e55d5a8873b4c2c4551b3f8b50c5f0",
+  "completed_epoch": 93,
+  "condition": "B1-binary",
+  "macro_validation_eer": 0.08149262513123862,
+  "name": "b1_binary_swinv2_tiny_seed2025",
+  "seed": 2025,
+  "status": "early_stopped",
+  "run_id": "402d41a6ed8a4d849b88ba83674a5cc9",
+  "history_sha256": "154eb9272615a656193752960ba99d74b610d07329cced9c7042628f91509678",
+  "curves_sha256": "e4c59156ea217cc0ace90fac565b797385a942a13b64b5940a4d6f7c1f3b02b4"
+}

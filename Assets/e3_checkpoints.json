@@ -1,0 +1,1343 @@
+{
+  "experiment": "E3",
+  "jobs": [
+    {
+      "name": "b1_binary_resnet18_seed42",
+      "architecture": "ResNet-18",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 42,
+      "selected_epoch": 83,
+      "checkpoint": "E3/ResNet-18/B1-binary/seed_42/best.pt",
+      "checkpoint_sha256": "0cdc37ae53ecaa55e88c1059bd3b93a748249d76f10edd2df2fee0585d62f4e1",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "022042682e76b07e806492282561fd886dbd742e4c73d7f9ebac3214eff36e9f"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b1_binary_resnet18_seed123",
+      "architecture": "ResNet-18",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 123,
+      "selected_epoch": 41,
+      "checkpoint": "E3/ResNet-18/B1-binary/seed_123/best.pt",
+      "checkpoint_sha256": "38b4cb635b672219c5d961c405f7990ec3dcfc4f2e4ab6127c142be53a5d9c65",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "745254531ea2ca706eac0d0fb8d1bfd202341447430ae02268eb2df24444b126"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b1_binary_resnet18_seed2025",
+      "architecture": "ResNet-18",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 2025,
+      "selected_epoch": 53,
+      "checkpoint": "E3/ResNet-18/B1-binary/seed_2025/best.pt",
+      "checkpoint_sha256": "bbb13d74f513a708e71b3f02b8f61185f42b3e7903a08dd259b178eac68341b3",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "3047bd3df33863d4f46e0e9b27287ba5bddd4cfed525d34f064873be3be1d683"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_resnet18_seed42",
+      "architecture": "ResNet-18",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 42,
+      "selected_epoch": 34,
+      "checkpoint": "E3/ResNet-18/B2-binary/seed_42/best.pt",
+      "checkpoint_sha256": "9e7d31c6e5b6ad3c58916ab36b5701f800c84aad592599e86764838e511e0dd2",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "1d56ab4a1fbbbfaa6e334d3e0fd5add54909e0db24fa21c13b395318ee8f7b84"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_resnet18_seed123",
+      "architecture": "ResNet-18",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 123,
+      "selected_epoch": 49,
+      "checkpoint": "E3/ResNet-18/B2-binary/seed_123/best.pt",
+      "checkpoint_sha256": "e0ba375aaf2beac18a6010cc947121543ed10cbe1e790e798bd65b33579383b9",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "8a192eb55f1df86d5b68eb588b4b150ea673b6ddf56d0637a14917ae876b607e"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_resnet18_seed2025",
+      "architecture": "ResNet-18",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 2025,
+      "selected_epoch": 24,
+      "checkpoint": "E3/ResNet-18/B2-binary/seed_2025/best.pt",
+      "checkpoint_sha256": "f2feef2b1e10b4bb3fb1e5953f7ec93673973b025a2284f7d93409e915541e15",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "ResNet-18",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "66dd72517ca73baa8d6997db162e419adaf3c2f34fd86b4fc4deac9f1d1e5d0b"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b1_binary_swinv2_tiny_seed42",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 42,
+      "selected_epoch": 20,
+      "checkpoint": "E3/SwinV2-Tiny/B1-binary/seed_42/best.pt",
+      "checkpoint_sha256": "c5a41395c1f3f153ecc899502a98661949672862ecd3e973f20e1f91b804d1e6",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "fbfcc37f753e0f6a8565e7f747099362e784e6fd7481444b96e9646dc3ba128b"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b1_seed42\\config_resolved.json",
+          "completed_run_config_sha256": "c7da0a00a343ae26116e717ed0e576df2141d8c2dd1aecd83b5e8f433917d6e4",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b1_seed42.yaml",
+          "config_sha256": "022042682e76b07e806492282561fd886dbd742e4c73d7f9ebac3214eff36e9f"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b1_binary_swinv2_tiny_seed123",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 123,
+      "selected_epoch": 56,
+      "checkpoint": "E3/SwinV2-Tiny/B1-binary/seed_123/best.pt",
+      "checkpoint_sha256": "8ab92c97139d243b7e01f214bfed5d97c2aa4b552140fb323c67ecbfdf219fda",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "f99e9e87c3c0a56c05b16803b5f69a285682b15435d22b49dc44a7ca90c9e08b"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b1_seed123\\config_resolved.json",
+          "completed_run_config_sha256": "38210022337351cfa3a21e1aedc7c9b6dcdcc5daeff32eeb29d2d1ca517efe6e",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b1_seed123.yaml",
+          "config_sha256": "745254531ea2ca706eac0d0fb8d1bfd202341447430ae02268eb2df24444b126"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b1_binary_swinv2_tiny_seed2025",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B1-binary",
+      "reference_condition": "E1-B1",
+      "seed": 2025,
+      "selected_epoch": 68,
+      "checkpoint": "E3/SwinV2-Tiny/B1-binary/seed_2025/best.pt",
+      "checkpoint_sha256": "883dec2ecd482277e1bbafb10f8ecb7785e55d5a8873b4c2c4551b3f8b50c5f0",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B1-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B1-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B1",
+          "reference_config_sha256": "7ab2d9bc34a2a4d39422631a93fe7be6121d72c36ca86f88240ed709edd697cc"
+        },
+        "experiment": "E3-B1-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b1_seed2025\\config_resolved.json",
+          "completed_run_config_sha256": "6cf9fd735be0421b03dcac199ed5efd90014f079185da059068c3134d9dfb997",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b1_seed2025.yaml",
+          "config_sha256": "3047bd3df33863d4f46e0e9b27287ba5bddd4cfed525d34f064873be3be1d683"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_swinv2_tiny_seed42",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 42,
+      "selected_epoch": 76,
+      "checkpoint": "E3/SwinV2-Tiny/B2-binary/seed_42/best.pt",
+      "checkpoint_sha256": "121043fa3c45f03dfcf44f880a37e8c421a3d4bbdfc7309e4c15f6f24eb4fcd7",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "6135d470e2864ec4d5955b56504cf324a3e4d00c14d88926569d6eac8941570d"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b2_seed42\\config_resolved.json",
+          "completed_run_config_sha256": "b59f524c3d313692e8859fc77e4bc6178c13f16e1400a230cd02b15c72fb381e",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b2_seed42.yaml",
+          "config_sha256": "1d56ab4a1fbbbfaa6e334d3e0fd5add54909e0db24fa21c13b395318ee8f7b84"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_swinv2_tiny_seed123",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 123,
+      "selected_epoch": 36,
+      "checkpoint": "E3/SwinV2-Tiny/B2-binary/seed_123/best.pt",
+      "checkpoint_sha256": "1d3b07c342bf504224cb8cbc2d38d2d156501c699e48af208af55129170c3eee",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "b98e572f60b644aaf74f295d07d59853d6c997dff42d523d4fbb2b2089e15109"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b2_seed123\\config_resolved.json",
+          "completed_run_config_sha256": "acca92fb1042cb3a35926dba220306fd824818b422b74156216e6183032587ae",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b2_seed123.yaml",
+          "config_sha256": "8a192eb55f1df86d5b68eb588b4b150ea673b6ddf56d0637a14917ae876b607e"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "b2_binary_swinv2_tiny_seed2025",
+      "architecture": "SwinV2-Tiny",
+      "condition": "B2-binary",
+      "reference_condition": "E1-B2",
+      "seed": 2025,
+      "selected_epoch": 79,
+      "checkpoint": "E3/SwinV2-Tiny/B2-binary/seed_2025/best.pt",
+      "checkpoint_sha256": "a826322102fa2600d959f9c1538408f123c9ba59fb7c8ad451216aa7f14a56ec",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": false,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "B2-binary",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "B2-binary",
+          "verify_cached_images_at_start": true
+        },
+        "e3": {
+          "architecture": "SwinV2-Tiny",
+          "grayscale_texture_access": false,
+          "independent_pretrained_initialization": true,
+          "input_values_before_normalization": [
+            0,
+            255
+          ],
+          "normalization_recalculated": false,
+          "photometric_augmentation": "disabled by user; strictly binary 0/255 inputs",
+          "reference_condition": "E1-B2",
+          "reference_config_sha256": "79ea2e7759d034fc62f5c4197fef8974099641ceea6fa70a87b992d1b68fc30c"
+        },
+        "experiment": "E3-B2-binary",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1b2_seed2025\\config_resolved.json",
+          "completed_run_config_sha256": "9013831ac1968d28ae5eac2a95159f161420a86c11e95ade4657185f69511529",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_e1b2_seed2025.yaml",
+          "config_sha256": "66dd72517ca73baa8d6997db162e419adaf3c2f34fd86b4fc4deac9f1d1e5d0b"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    }
+  ]
+}

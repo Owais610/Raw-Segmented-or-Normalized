@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "notebooks": [
+    {
+      "notebook": "E3 Experiments/Evaluation.ipynb",
+      "status": "PASS",
+      "seconds": 8.64,
+      "code_cells": 16
+    },
+    {
+      "notebook": "E3 Experiments/Training Codes/ResNet-18_B1-binary.ipynb",
+      "status": "PASS",
+      "seconds": 8.88,
+      "code_cells": 22
+    },
+    {
+      "notebook": "E3 Experiments/Training Codes/ResNet-18_B2-binary.ipynb",
+      "status": "PASS",
+      "seconds": 7.23,
+      "code_cells": 22
+    },
+    {
+      "notebook": "E3 Experiments/Training Codes/SwinV2-Tiny_B1-binary.ipynb",
+      "status": "PASS",
+      "seconds": 7.3,
+      "code_cells": 22
+    },
+    {
+      "notebook": "E3 Experiments/Training Codes/SwinV2-Tiny_B2-binary.ipynb",
+      "status": "PASS",
+      "seconds": 6.84,
+      "code_cells": 22
+    }
+  ],
+  "unit_tests_passed": 6,
+  "source_unit_tests_passed": 6,
+  "summary_fields_checked": 3000,
+  "canonical_seed_metrics_checked": 720,
+  "original_result_files_copied_exactly": 10,
+  "original_history_curve_pairs_copied_exactly": 12,
+  "best_checkpoint_hashes_verified": 12,
+  "existing_public_files_preserved": 445,
+  "relative_documentation_links_checked": 118,
+  "no_training_or_new_recognition_inference": true,
+  "no_biometric_images_or_checkpoints_uploaded": true,
+  "e3_file_count": 84,
+  "e3_total_bytes": 5958769,
+  "numerical_report": "Manuscript Tables/verification.json"
+}

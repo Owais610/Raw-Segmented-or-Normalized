@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "all_twelve_configurations_verified": true,
+  "b2_subset_b1_masks": 6527,
+  "gpu_smoke_checks": [
+    {
+      "architecture": "ResNet-18",
+      "attempts": 1,
+      "batch_size": 24,
+      "condition": "B1-binary",
+      "peak_training_vram_bytes": 744915968,
+      "pretrained_initialization": true,
+      "step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 19.031797409057617,
+        "embedding_norm_max": 1.0,
+        "embedding_norm_min": 0.9999999403953552,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 19.544759310508812,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 1.3288743495941162,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 1.5594199895858765,
+        "total": 1.051255226135254,
+        "triplet": 0.2715452313423157
+      },
+      "test_images_opened": 0,
+      "validation_domains": [
+        "CUST-Iris",
+        "CASIA-Interval",
+        "IITD"
+      ],
+      "validation_loader_passed": true
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "attempts": 1,
+      "batch_size": 24,
+      "condition": "B1-binary",
+      "peak_training_vram_bytes": 6497278976,
+      "pretrained_initialization": true,
+      "step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 15.345293045043945,
+        "embedding_norm_max": 1.0,
+        "embedding_norm_min": 0.9999998807907104,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 23.51655709832134,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 3.485055446624756,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 2.1490275859832764,
+        "total": 1.5141394138336182,
+        "triplet": 0.4396255910396576
+      },
+      "test_images_opened": 0,
+      "validation_domains": [
+        "CUST-Iris",
+        "CASIA-Interval",
+        "IITD"
+      ],
+      "validation_loader_passed": true
+    },
+    {
+      "architecture": "ResNet-18",
+      "attempts": 1,
+      "batch_size": 24,
+      "condition": "B2-binary",
+      "peak_training_vram_bytes": 744915968,
+      "pretrained_initialization": true,
+      "step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 10.306022644042969,
+        "embedding_norm_max": 1.0,
+        "embedding_norm_min": 0.9999999403953552,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 11.44699001875805,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 1.640225887298584,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 1.412560224533081,
+        "total": 0.9687380790710449,
+        "triplet": 0.2624579668045044
+      },
+      "test_images_opened": 0,
+      "validation_domains": [
+        "CUST-Iris",
+        "CASIA-Interval",
+        "IITD"
+      ],
+      "validation_loader_passed": true
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "attempts": 1,
+      "batch_size": 24,
+      "condition": "B2-binary",
+      "peak_training_vram_bytes": 6497278976,
+      "pretrained_initialization": true,
+      "step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 17.581920623779297,
+        "embedding_norm_max": 1.0000001192092896,
+        "embedding_norm_min": 0.9999998807907104,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 26.858936370331833,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 3.5769548416137695,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 1.900660514831543,
+        "total": 1.3376039266586304,
+        "triplet": 0.3872736394405365
+      },
+      "test_images_opened": 0,
+      "validation_domains": [
+        "CUST-Iris",
+        "CASIA-Interval",
+        "IITD"
+      ],
+      "validation_loader_passed": true
+    }
+  ],
+  "no_grayscale_decoder_calls": true,
+  "no_test_pixel_reads": true
+}

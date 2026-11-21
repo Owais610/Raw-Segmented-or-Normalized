@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "seeds": [
+    42,
+    123,
+    2025
+  ],
+  "sample_sd_ddof": 1,
+  "checks": {
+    "canonical_seed_metric_values": 720,
+    "seed_summary_values": 1200
+  },
+  "maximum_absolute_differences": {
+    "canonical_seed_metric_values": 0,
+    "seed_summary_values": 1.1102230246251565e-16
+  },
+  "tables": 2,
+  "rows_per_table": 12,
+  "displayed_metric_cells": 120,
+  "datasets": [
+    "CUST-Iris",
+    "CASIA-Interval",
+    "IITD",
+    "AMF",
+    "UTIRIS_NIR"
+  ],
+  "source_sha256": {
+    "E3 Experiments/Results/EVALUATION_VERIFICATION.json": "ba942fd89e383da7f058db0efcd67cf52ee01d7be0a74f820a9a5d5d94596489",
+    "E3 Experiments/Results/Comparisons/all_conditions_individual.csv": "6cd7d92098578b42128144902b2e90e4bda18c9fdb447fecc0157a5a721189a9",
+    "E3 Experiments/Results/Comparisons/all_conditions_three_seed.csv": "fecec8ae178e5c2419141c33b04b0207783f1d92935621096022ecd5626d1193",
+    "E2 Experiments/E2-A/Results/individual_metrics.csv": "9893904a3692c73b04b403a26371154c2a7ddc80a99001750656f64c6acf2d8a",
+    "E2 Experiments/E2-G/Results/individual_metrics.csv": "3340047c3694759ae6a9112ea6a397719620766d98698c811c2c7f8fcd57b461",
+    "E3 Experiments/Results/individual_metrics.csv": "3b13bd416946eb93220d44ef667040ff10bae28e875af3f450566aa2af340481"
+  },
+  "support_definition": "G = grayscale segmented B1/B2; M = matching binary mask",
+  "train_test_cases": {
+    "E1_gray_train_gray_test": "G->G",
+    "E2_gray_train_binary_test": "G->M",
+    "E3_binary_train_binary_test": "M->M"
+  },
+  "populations": [
+    {
+      "dataset": "CUST-Iris",
+      "genuine": 634,
+      "images": 427,
+      "impostor": 89473,
+      "iris_ids": 108,
+      "opposite_eye_diagnostic": 844,
+      "subjects": 54
+    },
+    {
+      "dataset": "CASIA-Interval",
+      "genuine": 1353,
+      "images": 395,
+      "impostor": 75272,
+      "iris_ids": 59,
+      "opposite_eye_diagnostic": 1190,
+      "subjects": 37
+    },
+    {
+      "dataset": "IITD",
+      "genuine": 628,
+      "images": 308,
+      "impostor": 45936,
+      "iris_ids": 63,
+      "opposite_eye_diagnostic": 714,
+      "subjects": 32
+    },
+    {
+      "dataset": "AMF",
+      "genuine": 1015,
+      "images": 523,
+      "impostor": 134214,
+      "iris_ids": 108,
+      "opposite_eye_diagnostic": 1274,
+      "subjects": 54
+    },
+    {
+      "dataset": "UTIRIS_NIR",
+      "genuine": 1544,
+      "images": 770,
+      "impostor": 292613,
+      "iris_ids": 158,
+      "opposite_eye_diagnostic": 1908,
+      "subjects": 79
+    }
+  ],
+  "no_source_or_experimental_artifacts_modified": true,
+  "no_training_or_inference": true,
+  "table_sha256": "664dc73c890ba3db0184c945f1e19d1cd10d16986d20f85bf2a3f1b3f4a61fbc"
+}

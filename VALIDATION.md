@@ -1,5 +1,7 @@
 # Reproducibility-package validation
 
+**21 November 2026 E3 addition:** see the separate [E3 validation report](E3%20Experiments/VALIDATION.md) for the twelve completed binary-mask training runs, matched evaluations, five fresh-kernel notebook checks, unit tests and independent numerical replay. The original E1/E2 validation record below is preserved.
+
 Executed on **16 November 2026**, Python 3.11, the pinned package environment, NVIDIA RTX 5060 Laptop GPU (8 GB).
 Scientific source: the author's [IrisCueLab implementation](https://github.com/Owais610/IrisCueLab/tree/dc1ab6d28efe78ef0447402bd00fd4e1d9b3ebc1). Its tracked files and HEAD remain unchanged.
 This document reports performed checks; it does not claim that 30 new training runs or every large explanatory workload was repeated.

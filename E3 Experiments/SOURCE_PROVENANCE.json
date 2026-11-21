@@ -1,0 +1,28 @@
+{
+  "original_plan_sha256": "048bc15b2b145396091369445f5deb874224967a2e33aa553e4253aab7963b4a",
+  "original_preflight_sha256": "8abcf4990b116846009d22b43be73f2c6019a1684dd3bf05b8d6bd5f17250f80",
+  "original_evaluation_audit_sha256": "dff952474ee52125af033f03440ad2730c3ed1f3bc093437a6e95f1d08168550",
+  "original_implementation_sha256": {
+    "e3.py": "1b43d7602d201a54385b7f8063a21077a1689ffeec5655ac59f357ab84bea757",
+    "e3_common.py": "c902d8baa159518a01b7e75fdf633f5f49a9980f99be807245bf7743a34cb49c",
+    "e3_compare.py": "2931b1d48b1d0c774d978d7d71576c215ede0cc25386f5a0c87d7d4b73f79978",
+    "e3_data.py": "cba0937350005cf5d8323e114f2fcae8e237a6fd5b454371531f5f613eac5a6d",
+    "e3_evaluate.py": "94bdb1eb8e45de0bbd5597dead1ecc074fb2a3189ae4b66b1b87cc63bc99514f",
+    "e3_plan.py": "ff8cd7b511c58927095230756edb90d25abdea0ac5238301410dfaf010b18737",
+    "e3_preflight.py": "74155dacf92278a4c3eeb56ecf60ec58550806e7ea60dc7293b865107c5b8e35",
+    "e3_training.py": "f2aad9deb3f9b150ee0edfa7d685e85c97d1b29333870b6e31885256a5c453cc"
+  },
+  "original_results_sha256": {
+    "evaluation/individual_metrics.csv": "3b13bd416946eb93220d44ef667040ff10bae28e875af3f450566aa2af340481",
+    "evaluation/matched_population_counts.csv": "3d757c23a50b395206222c63bbea09ce570dc926712c774080b5792ce93c1496",
+    "evaluation/selected_validation_results.csv": "8b42ade5462c469f8d4c54aa5d8c5c537ad1cbff2538345190863fe0e61ceb4d",
+    "evaluation/three_seed_summary.csv": "ed7ea188b4c685cbc4270cb142b432a82be81bbe8368a99c9da149d4c3b02303",
+    "comparison/all_conditions_individual.csv": "6cd7d92098578b42128144902b2e90e4bda18c9fdb447fecc0157a5a721189a9",
+    "comparison/all_conditions_three_seed.csv": "fecec8ae178e5c2419141c33b04b0207783f1d92935621096022ecd5626d1193",
+    "comparison/swin_minus_resnet_individual.csv": "9c6493a7d4f2577e9cfca3e1474b05fda699e342f6376a78887cb1bc53aea261",
+    "comparison/swin_minus_resnet_three_seed.csv": "0e126517cbf6d94c6f31dba485b76a521830c40c022ce5cf46751ba2948bc0e6",
+    "comparison/training_condition_differences_individual.csv": "59df4037ea5c49035822b3a34d95817d4a14c52da18b95e92e97dc40ab7001c2",
+    "comparison/training_condition_differences_three_seed.csv": "3f6f7b20be6e96b92fbc58f0b74b89292bea187d2931e90fd8f0f291008334de"
+  },
+  "original_artifacts_modified": false
+}
