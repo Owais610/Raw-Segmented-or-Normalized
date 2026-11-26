@@ -5,7 +5,7 @@
 **21 November 2026 E3 addition:** see the separate [E3 validation report](E3%20Experiments/VALIDATION.md) for the twelve completed binary-mask training runs, matched evaluations, five fresh-kernel notebook checks, unit tests and independent numerical replay. The original E1/E2 validation record below is preserved.
 
 Executed on **16 November 2026**, Python 3.11, the pinned package environment, NVIDIA RTX 5060 Laptop GPU (8 GB).
-Scientific source: the author's [IrisCueLab implementation](https://github.com/Owais610/IrisCueLab/tree/dc1ab6d28efe78ef0447402bd00fd4e1d9b3ebc1). Its tracked files and HEAD remain unchanged.
+The training and evaluation methods are included directly in this repository’s standalone notebooks. Original experimental artifacts remain unchanged.
 This document reports performed checks; it does not claim that 30 new training runs or every large explanatory workload was repeated.
 
 ## Notebook execution and independence — PASS
@@ -80,3 +80,5 @@ The repository now contains **17 standalone notebooks**. This addition preserves
 - The publication retains all scientific values in 18 tables. Large image/subject diagnostics use Parquet; checkpoint/path/hash provenance columns are omitted. Ten original statistical PNGs are byte-identical copies. Licensed image/mask contact sheets, learned weights, pair-score arrays and embedding caches are not committed.
 
 No full training, new threshold selection, seed selection, subject reassignment or new recognition population was introduced. Publication links and private-path checks pass. The full real E2-G workload is the completed source experiment; packaging validation replays its saved scores and uses the bounded inference checks described above.
+
+Notebook-produced checkpoints use the generic `iris-verification-notebook-v1` label. Resume accepts compatible `-notebook-v1` schema labels while retaining the original full configuration and frozen-membership checks. Original experimental checkpoints and results are unchanged.

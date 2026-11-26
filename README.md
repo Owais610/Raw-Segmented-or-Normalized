@@ -74,5 +74,5 @@ The [validation report](VALIDATION.md) distinguishes executed checks from unexec
 
 ## Scope of this release
 
-Only the used methods and relevant completed results are included. E1-C contains **pure V2 geometry and native sampling**, shared by C1/C2. The earlier unmatched evaluation outputs and superseded preprocessing implementations remain solely in the original [IrisCueLab archive](https://github.com/Owais610/IrisCueLab).
+Only the used methods and relevant completed results are included. E1-C contains **pure V2 geometry and native sampling**, shared by C1/C2.
 This release does not change any subject assignments, scientific settings or saved metric values. The author's [FedHAT](https://github.com/Owais610/FedHAT) is prior work by the same author and informed the metric-learning implementation.
