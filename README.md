@@ -46,7 +46,7 @@ Start with the **[E3 overview](E3%20Experiments/README.md)** or **[EER and TAR@0
 
 The **[E4 section](E4%20Experiments/README.md)** contains the six independently trained mean-filled complement models: both architectures and all three seeds. It includes two standalone training notebooks, an evaluation notebook, original histories/curves, selected checkpoint hashes, all four test/external metrics and the detailed report. Its approved stricter native sampling footprint differs from the earlier E2-E complement at interpolation-mixed boundary pixels.
 
-The release now documents **48 training runs: 30 E1 + 12 E3 + 6 E4**. The [complete checkpoint index](Assets/selected_checkpoints.csv) lists every selected epoch, external asset location and SHA-256. See the **[complete paper tables and portable table builder](Manuscript%20Tables/README.md)** for Tables III?VI and the TAR@1% supplementary tables. Every reported comparison uses its original matched population; regional occlusion keeps its separately matched feasible cohort.
+The release now documents **48 training runs: 30 E1 + 12 E3 + 6 E4**. The [complete checkpoint index](Assets/selected_checkpoints.csv) lists every selected epoch, external asset location and SHA-256. See the **[complete paper tables and portable table builder](Manuscript%20Tables/README.md)** for Tables III to VI and the TAR@1% supplementary tables. Every reported comparison uses its original matched population; regional occlusion keeps its separately matched feasible cohort.
 
 ## Datasets and primary evaluation population
 
