@@ -1,0 +1,6 @@
+dataset,images,subjects,iris_ids,genuine,impostor,opposite_eye_diagnostic,extra_removal_images,added_pixels_median,remaining_native_annulus_contributions
+CUST-Iris,427,54,108,634,89473,844,427,332.0,0
+CASIA-Interval,395,37,59,1353,75272,1190,0,0.0,0
+IITD,308,32,63,628,45936,714,0,0.0,0
+AMF,523,54,108,1015,134214,1274,523,194.0,0
+UTIRIS_NIR,770,79,158,1544,292613,1908,770,451.0,0

@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "seeds": [
+    42,
+    123,
+    2025
+  ],
+  "sample_sd_ddof": 1,
+  "logical_comparisons": 220,
+  "seed_records": 660,
+  "displayed_mean_sd_cells": 660,
+  "tables": [
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "S1",
+    "S2"
+  ],
+  "source_sha256": {
+    "E2 Experiments/E2-A/Results/individual_metrics.csv": "9893904a3692c73b04b403a26371154c2a7ddc80a99001750656f64c6acf2d8a",
+    "E2 Experiments/E2-C/Results/individual_metrics.csv": "eca49bd8dfdbf0caeab88baaf773e054f282a6c5f5ef854b4374f77fb4b3802b",
+    "E2 Experiments/E2-D/Results/individual_metrics.csv": "1126fe484120276039b99ca4edc463f20650b2ee89f55a572886d994b88798b8",
+    "E2 Experiments/E2-E/Results/individual_metrics.csv": "2202498d6ecdb1f1624f422f6084b7b3732b9523828ab1b699ab67d4fc8fc641",
+    "E2 Experiments/E2-G/Results/individual_metrics.csv": "3340047c3694759ae6a9112ea6a397719620766d98698c811c2c7f8fcd57b461",
+    "E3 Experiments/Results/individual_metrics.csv": "3b13bd416946eb93220d44ef667040ff10bae28e875af3f450566aa2af340481",
+    "E4 Experiments/Results/individual_metrics.csv": "c55dc2f17433ae297fe333786f7aea04b33035f3a9d265df30b44f04efafcbc7",
+    "Manuscript Tables/table_templates.json": "a9257947d918750a7dc21d5068c94707e83825ddee9ec00be04f734fc0472425"
+  },
+  "metric_units": "Stored metrics and deltas are ratios; EER/TAR LaTeX cells are percent or percentage points. ROC-AUC remains unitless.",
+  "regional_difference": "iris-occluded minus periocular-occluded, not unoccluded-baseline change",
+  "training": false,
+  "inference": false,
+  "submitted_pdf_comparison": {
+    "status": "PASS",
+    "submitted_pdf_sha256": "caf331ef952cb12f36d9b85463eadbe493f293b80622109213052714b0331800",
+    "submitted_pages": 13,
+    "mean_sd_cells_checked": 660,
+    "original_submission_modified": false,
+    "manuscript_uploaded": false
+  },
+  "pdf_preview": {
+    "status": "PASS",
+    "main_pages": 3,
+    "supplement_pages": 1,
+    "mean_sd_cells_checked": 660,
+    "ieee_class": "IEEEtran journal 10pt",
+    "latex_warnings": 0,
+    "main_pdf_sha256": "5f93da963ac18495c576465d2e6086acd2f574143d9b83f0463bf87829268d6e",
+    "supplement_pdf_sha256": "77a9b7eb94b5dfd115fb8a0c00ae5cfb1e2de24a53b8c0edfd5f091bf908fcad"
+  }
+}

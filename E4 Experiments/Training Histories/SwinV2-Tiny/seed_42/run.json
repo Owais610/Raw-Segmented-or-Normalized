@@ -1,0 +1,13 @@
+{
+  "name": "complement_mean_swinv2_tiny_seed42",
+  "architecture": "SwinV2-Tiny",
+  "seed": 42,
+  "selected_epoch": 27,
+  "completed_epoch": 52,
+  "best_macro_validation_eer": 0.020359835805083232,
+  "checkpoint_sha256": "c1a4d849d64be9313d58be9b43a6a0d4ee156f47095dc360e3a40b0bb7c2f13d",
+  "status": "early_stopped",
+  "run_id": "42c4554fec9244df9999357923fa0455",
+  "history_sha256": "b725afa902e1f465733209d8972e94315e78e6697a0a96c25e48a48c86853074",
+  "curves_sha256": "0838ecdafa3d8fdfd018fb343eb6fbd53f43c10baa513639cb87d9caeaa8386f"
+}

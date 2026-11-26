@@ -1,0 +1,42 @@
+{
+  "all_saved_embedding_pair_scores_exact": true,
+  "all_thirty_evaluations_replayed": true,
+  "checkpoints": 6,
+  "counts": {
+    "matched_embeddings": 14538,
+    "pair_scores_genuine": 31044,
+    "pair_scores_impostor": 3825048,
+    "pair_scores_opposite_eye_diagnostic": 35580,
+    "score_metric_replay": 120,
+    "sealed_files": 136,
+    "seed_csv_metrics": 120,
+    "selected_validation_score": 6,
+    "summary_fields": 400
+  },
+  "datasets": [
+    "CUST-Iris",
+    "CASIA-Interval",
+    "IITD",
+    "AMF",
+    "UTIRIS_NIR"
+  ],
+  "evaluation_plan_sha256": "9b25453f9374e866ff75f0a62e10264785296c88c0f4860eaa2dcd501e8a07dc",
+  "maximum_absolute_differences": {
+    "score_metric_replay": 0,
+    "seed_csv_metrics": 0,
+    "selected_validation_score": 0,
+    "summary_fields": 1.1102230246251565e-16
+  },
+  "original_training_artifacts_unchanged": true,
+  "sample_sd_ddof": 1,
+  "seeds": [
+    42,
+    123,
+    2025
+  ],
+  "selected_validation_results_sha256": "89ac108ca70f6d6deccbd3abb45b781489e2fdfe6f6e1c7e28d188f5af44e9c0",
+  "status": "PASS",
+  "training_or_inference_rerun": false,
+  "training_validation_subject_iris_image_overlap": 0,
+  "verification_code_sha256": "08f0ee8106853ec6ea1d25b7487fdd593d0d8ac432dec8c590874fa47ded4b43"
+}

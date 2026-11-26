@@ -85,3 +85,12 @@ New outputs must be outside recorded `Training Histories` and `Results`. `.gitig
 ## E2-G binary-input assets
 
 E2-G uses the existing B1/B2 320×320 binary support files and matched populations; no new image preprocessing asset is required. Optional completed binary embeddings use `intervention_embeddings/E2-G/<dataset>/<job-name>/binary_geometry.npz`, with `image_ids` in the exact published matched-membership order and float32 unit-normalized `embeddings` [N,256]. The private original output is `<dataset>/runs/<job-name>/binary_geometry/embeddings.npz`; copy it explicitly to the configured asset location if desired. These caches are not outputs required from another notebook. Original grayscale baselines reuse the unchanged full-population E1 embedding assets, whose inference order differs from the matched-only binary inference order. Masks, grayscale previews, checkpoints, embeddings and pair scores are not committed.
+
+
+## E4 strict complement assets
+
+E4 uses the same original 320?320 raw caches, frozen normalization and native segmentation masks. Its checkpoint index is `Assets/e4_checkpoints.json`; supply original selected weights under `checkpoints/E4/<architecture>/seed_<seed>/best.pt`. Pretrained initialization remains the E1 backbone, never an E1-trained model.
+
+For training, supply `data/e4_train_validation_masks.parquet` with `image_id`, `split` and `removal_mask_path`, matching all 5,372 retained training and 1,155 validation rows exactly. Mask paths are resolved relative to `data/e4_masks/train_validation/`, with optional explicit PATH_REMAP. These are the original audited strict masks, not the old E2 annulus supports. They contain `B1 OR (INTER_AREA(native_annulus)>0)` in original letterbox coordinates. The input helper demonstrates the frozen construction. Test/external masks are not included in this training asset.
+
+Evaluation uses the same `evaluation_inventory.parquet` and published common population/pairs as E2-A. Native mask paths, `raw_geometry_json`, original B1 support and raw cache are used to reproduce the same strict footprint without fitting or tuning. Optional original embeddings go under `e4_embeddings/<dataset>/<job-name>/embeddings.npz`, with `image_ids` in exact matched-membership order and float32 normalized `[N,256]` embeddings. Explicitly select saved-embedding replay or fresh inference; no automatic fallback is used. Model weights, native images, masks and large embedding arrays remain external assets.

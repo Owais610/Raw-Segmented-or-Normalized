@@ -42,6 +42,12 @@ E3 trains both architectures on the exact B1/B2 binary supports used in E2-G. It
 
 Start with the **[E3 overview](E3%20Experiments/README.md)** or **[EER and TAR@0.1% FAR comparison tables](E3%20Experiments/Manuscript%20Tables/ieeetran_preview.pdf)**. The section includes four standalone training notebooks, the evaluation notebook, twelve original training histories/curves, all four seed-level metrics, three-seed summaries and the detailed report. [E3 validation](E3%20Experiments/VALIDATION.md) documents executed checks. Original E1/E2 results remain unchanged.
 
+## E4: learning without the iris annulus
+
+The **[E4 section](E4%20Experiments/README.md)** contains the six independently trained mean-filled complement models: both architectures and all three seeds. It includes two standalone training notebooks, an evaluation notebook, original histories/curves, selected checkpoint hashes, all four test/external metrics and the detailed report. Its approved stricter native sampling footprint differs from the earlier E2-E complement at interpolation-mixed boundary pixels.
+
+The release now documents **48 training runs: 30 E1 + 12 E3 + 6 E4**. The [complete checkpoint index](Assets/selected_checkpoints.csv) lists every selected epoch, external asset location and SHA-256. See the **[complete paper tables and portable table builder](Manuscript%20Tables/README.md)** for Tables III?VI and the TAR@1% supplementary tables. Every reported comparison uses its original matched population; regional occlusion keeps its separately matched feasible cohort.
+
 ## Datasets and primary evaluation population
 
 CUST-Iris, CASIA-Interval and IITD use the original held-out test subjects. AMF and UTIRIS NIR are independent external zero-shot datasets; none of their subjects enters training or checkpoint selection. Results are calculated independently within each dataset.

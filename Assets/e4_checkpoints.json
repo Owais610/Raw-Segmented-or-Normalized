@@ -1,0 +1,674 @@
+{
+  "experiment": "E4",
+  "jobs": [
+    {
+      "name": "complement_mean_resnet18_seed42",
+      "architecture": "ResNet-18",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 42,
+      "selected_epoch": 66,
+      "checkpoint": "E4/ResNet-18/seed_42/best.pt",
+      "checkpoint_sha256": "0345b4b39f464af12af7bdfc1bf4614217216ec0b8d170dbaf9e726b98c82a29",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "ResNet-18",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "a69768ebcf4e6c09f318fafa7e0d86223412ff79b4b89bcbc473f0e1f953c78d",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "complement_mean_resnet18_seed123",
+      "architecture": "ResNet-18",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 123,
+      "selected_epoch": 72,
+      "checkpoint": "E4/ResNet-18/seed_123/best.pt",
+      "checkpoint_sha256": "c9cd0e3c1f295c2f0b1486bea9b22efcbbdc170aa4ab95d1135ce9d692fd3996",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "ResNet-18",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "3ab1eca1b10201425921adac3183a7df4f94860366858cda50f946d4e2e965c0",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "complement_mean_resnet18_seed2025",
+      "architecture": "ResNet-18",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 2025,
+      "selected_epoch": 12,
+      "checkpoint": "E4/ResNet-18/seed_2025/best.pt",
+      "checkpoint_sha256": "5d2c8150d0696f13e3952f25d5fc9f5687275ba4580b78ffed1b4d5c2354e0d3",
+      "config": {
+        "architecture": {
+          "name": "resnet18.a1_in1k"
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "ResNet-18",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "d20e754684ba027578ce8f84ebbdcdd503ed388b9d2fe16775fcb08c36fdab53",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "complement_mean_swinv2_tiny_seed42",
+      "architecture": "SwinV2-Tiny",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 42,
+      "selected_epoch": 27,
+      "checkpoint": "E4/SwinV2-Tiny/seed_42/best.pt",
+      "checkpoint_sha256": "c1a4d849d64be9313d58be9b43a6a0d4ee156f47095dc360e3a40b0bb7c2f13d",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "SwinV2-Tiny",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "04b10e9ff635dc32645863c40683d8f9a23d9ed6a13fc2602eb4bc89dead56cb",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1a_raw_resnet18_seed42\\config_resolved.json",
+          "completed_run_config_sha256": "4ec20b1f49cd7820eb8d6eb33c898de53b77b8fb5c8bcbd9afd923b407ca2461",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train.yaml",
+          "config_sha256": "a69768ebcf4e6c09f318fafa7e0d86223412ff79b4b89bcbc473f0e1f953c78d"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 42,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "complement_mean_swinv2_tiny_seed123",
+      "architecture": "SwinV2-Tiny",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 123,
+      "selected_epoch": 61,
+      "checkpoint": "E4/SwinV2-Tiny/seed_123/best.pt",
+      "checkpoint_sha256": "6518a3cca5985b7aad834d1b9383d9faf2e7d88a8db838cfde591ac92be0e473",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "SwinV2-Tiny",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "e1ca08e3f63d06eea27792cff082402751b185902ebf76759b67e2518a7c83dc",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1a_raw_resnet18_seed123\\config_resolved.json",
+          "completed_run_config_sha256": "03f71e6cf5889baaf7045ee12e40bdab54a7c697af76e025fa171207183d44d5",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_seed123.yaml",
+          "config_sha256": "3ab1eca1b10201425921adac3183a7df4f94860366858cda50f946d4e2e965c0"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 123,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    },
+    {
+      "name": "complement_mean_swinv2_tiny_seed2025",
+      "architecture": "SwinV2-Tiny",
+      "condition": "A-complement-mean-strict",
+      "reference_condition": "E1-A",
+      "seed": 2025,
+      "selected_epoch": 21,
+      "checkpoint": "E4/SwinV2-Tiny/seed_2025/best.pt",
+      "checkpoint_sha256": "048b90095d221fc1bfd112383c8219cf316fb0756d940331b08ec354a7e65237",
+      "config": {
+        "architecture": {
+          "attention_precision": "float32",
+          "attention_precision_scope": "all_12_window_attention_modules",
+          "compatibility_decision": "user_approved_dynamic_attention_masks_all_five_conditions",
+          "embedding_dim": 256,
+          "feature_dim": 768,
+          "full_fine_tune": true,
+          "global_pool": "avg",
+          "in_chans": 1,
+          "input_size": [
+            320,
+            320
+          ],
+          "name": "swinv2_tiny_window8_256",
+          "num_classes": 0,
+          "outer_input_shape_guard": true,
+          "precision_decision": "user_approved_float32_window_attention_all_five_conditions",
+          "pretrained": true,
+          "pretrained_tag": "ms_in1k",
+          "projection_hidden_dim": 512,
+          "remaining_precision": "original_cuda_amp_float16_with_grad_scaler",
+          "strict_img_size": false
+        },
+        "augmentation": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "enabled": true,
+          "geometric_transforms": false,
+          "horizontal_flip": false,
+          "probability": 0.5,
+          "random_erasing": false
+        },
+        "condition": "A-complement-mean-strict",
+        "data": {
+          "normalization_scope": "pk_eligible_training",
+          "normalization_user_confirmation": "Use 5,356 PK-eligible images",
+          "representation": "complement_mean_strict",
+          "verify_cached_images_at_start": true
+        },
+        "e4": {
+          "arbitrary_dilation_pixels": 0,
+          "architecture": "SwinV2-Tiny",
+          "augmentation_order": "remove annulus -> original E1 photometric augmentation -> frozen normalization -> reapply normalized-zero fill",
+          "boundary_decision": "User approved stricter footprint mask; remove every native-annulus contribution",
+          "independent_pretrained_initialization": true,
+          "native_footprint_threshold": 0.0,
+          "normalization_recalculated": false,
+          "reference_condition": "E1-A",
+          "reference_config_sha256": "8d0efb734d0d3ff7b3be14762fe5fd2481c887e7a515faf9ea9be658e3bcf3b2",
+          "removal_rule": "E2 annulus support UNION positive native-annulus INTER_AREA sampling footprint",
+          "same_input_as_e2": false
+        },
+        "experiment": "E4_complement_mean_strict",
+        "logging": {
+          "curves": "curves.png",
+          "jsonl": "history.jsonl",
+          "write_curves_every_epoch": true
+        },
+        "objective": {
+          "supcon_temperature": 0.07,
+          "supcon_weight": 0.5,
+          "triplet_margin": 0.3
+        },
+        "optimizer": {
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "gradient_clip_norm": 5.0,
+          "lr": 0.0001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "reference_resnet": {
+          "completed_run_config": "experiments\\experiment_1\\resnet18_metric\\runs\\e1a_raw_resnet18_seed2025\\config_resolved.json",
+          "completed_run_config_sha256": "1e3fc011687815e72ecdd715c85980a168edc4e73e754b17602a284f6fc7944c",
+          "config": "experiments\\experiment_1\\resnet18_metric\\config_train_seed2025.yaml",
+          "config_sha256": "d20e754684ba027578ce8f84ebbdcdd503ed388b9d2fe16775fcb08c36fdab53"
+        },
+        "runtime": {
+          "amp": true,
+          "amp_dtype": "float16",
+          "deterministic_algorithms": true,
+          "device": "cuda",
+          "grad_scaler_init_scale": 1024.0,
+          "num_workers": 0,
+          "offline_pretrained": true,
+          "validation_batch_size": 24
+        },
+        "sampler": {
+          "batch_size": 24,
+          "batches_per_epoch": 224,
+          "captures_per_identity": 2,
+          "identities_per_domain": 4
+        },
+        "schedule": {
+          "early_stopping_patience": 25,
+          "improvement_tolerance": 0.0001,
+          "max_epochs": 150,
+          "min_epochs": 30,
+          "selection": "macro_validation_eer",
+          "validation_frequency": 1
+        },
+        "schema_version": 1,
+        "seed": 2025,
+        "validation": {
+          "all_genuine_pairs": true,
+          "all_primary_impostor_pairs": true,
+          "evaluate_test": false,
+          "evaluation_augmentation": false,
+          "score_chunk_size": 65536
+        },
+        "version": 1
+      }
+    }
+  ]
+}

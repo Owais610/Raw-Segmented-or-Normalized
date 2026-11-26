@@ -1,0 +1,69 @@
+{
+  "all_six_configs_verified": true,
+  "batch_shape": [
+    24,
+    1,
+    320,
+    320
+  ],
+  "batches_per_epoch": 224,
+  "gpu_checks": [
+    {
+      "architecture": "ResNet-18",
+      "attempts": 1,
+      "backbone_and_projection_trainable": true,
+      "batch_size": 24,
+      "complete_validation_loader_passed": true,
+      "gradient_step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 4.320772647857666,
+        "embedding_norm_max": 1.0000001192092896,
+        "embedding_norm_min": 0.9999999403953552,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 5.819527398092492,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 1.8671314716339111,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 1.3100197315216064,
+        "total": 0.8867312073707581,
+        "triplet": 0.23172132670879364
+      },
+      "peak_training_vram_bytes": 744915968,
+      "pretrained_initialization_verified": true,
+      "test_images_opened": 0
+    },
+    {
+      "architecture": "SwinV2-Tiny",
+      "attempts": 1,
+      "backbone_and_projection_trainable": true,
+      "batch_size": 24,
+      "complete_validation_loader_passed": true,
+      "gradient_step": {
+        "amp_enabled": true,
+        "backbone_gradient_norm": 6.253724575042725,
+        "embedding_norm_max": 1.0,
+        "embedding_norm_min": 0.9999999403953552,
+        "grad_scaler_scale": 1024.0,
+        "gradient_norm_before_clip": 17.959639078091755,
+        "loss_dtype": "torch.float32",
+        "optimizer_steps": 1,
+        "projection_gradient_norm": 3.270268678665161,
+        "skipped_nonfinite_steps": 0,
+        "supcon": 1.325594186782837,
+        "total": 0.9497168660163879,
+        "triplet": 0.2869197726249695
+      },
+      "peak_training_vram_bytes": 6497278976,
+      "pretrained_initialization_verified": true,
+      "test_images_opened": 0
+    }
+  ],
+  "normalization_recalculated": false,
+  "pairs_regenerated": false,
+  "plan_sha256": "c63a9c5e63c1d3dc3a59c0ff8e6aef4f16818c95975fe3c1a53795ef19970ad9",
+  "status": "passed",
+  "test_images_opened": 0,
+  "train_images": 5372,
+  "validation_images": 1155
+}

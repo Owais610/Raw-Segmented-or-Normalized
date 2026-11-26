@@ -1,0 +1,102 @@
+\begin{table*}[!t]
+\centering
+\caption{True Accept Rate (TAR, \%) at 1\% FAR, reported as mean $\pm$ SD across three seeds. Bold indicates higher TAR.}
+\label{tab:supp-tar1-performance}
+\begingroup
+\small
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccccc@{}}
+\toprule
+& & \multicolumn{3}{c}{Internal Datasets} & \multicolumn{2}{c}{External Datasets} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-7}
+Representation & Architecture & CUST-Iris & CASIA-Interval & IITD & AMF & UTIRIS-NIR \\
+\midrule
+\multirow{2}{*}{A} & ResNet-18 & {\boldmath $98.21 \pm 0.48$} & {\boldmath $95.84 \pm 2.08$} & {\boldmath $99.36 \pm 0.55$} & {\boldmath $98.92 \pm 0.84$} & {\boldmath $80.27 \pm 0.98$} \\
+ & SwinV2-Tiny & $96.95 \pm 1.64$ & $93.10 \pm 1.29$ & $98.09 \pm 0.80$ & $98.59 \pm 0.32$ & $67.18 \pm 8.15$ \\
+\midrule
+\multirow{2}{*}{B1} & ResNet-18 & {\boldmath $98.21 \pm 0.64$} & {\boldmath $94.60 \pm 0.97$} & $98.89 \pm 0.32$ & {\boldmath $97.73 \pm 0.69$} & {\boldmath $80.03 \pm 2.48$} \\
+ & SwinV2-Tiny & $97.42 \pm 0.60$ & $92.21 \pm 1.67$ & {\boldmath $99.26 \pm 0.75$} & $96.95 \pm 1.29$ & $74.61 \pm 4.76$ \\
+\midrule
+\multirow{2}{*}{B2} & ResNet-18 & {\boldmath $97.84 \pm 0.79$} & {\boldmath $91.65 \pm 4.50$} & $98.14 \pm 1.85$ & $97.80 \pm 0.71$ & $75.37 \pm 3.32$ \\
+ & SwinV2-Tiny & $96.37 \pm 1.55$ & $90.69 \pm 3.95$ & {\boldmath $98.73 \pm 0.28$} & {\boldmath $97.83 \pm 0.94$} & {\boldmath $76.21 \pm 1.76$} \\
+\midrule
+\multirow{2}{*}{C1} & ResNet-18 & $94.90 \pm 0.55$ & $89.16 \pm 4.21$ & $96.34 \pm 2.78$ & $95.14 \pm 4.15$ & $73.29 \pm 5.41$ \\
+ & SwinV2-Tiny & {\boldmath $97.69 \pm 0.46$} & {\boldmath $95.81 \pm 2.68$} & {\boldmath $99.47 \pm 0.24$} & {\boldmath $98.92 \pm 0.30$} & {\boldmath $85.15 \pm 2.79$} \\
+\midrule
+\multirow{2}{*}{C2} & ResNet-18 & $93.11 \pm 4.56$ & $85.34 \pm 3.40$ & $96.71 \pm 0.88$ & $96.32 \pm 1.93$ & $66.58 \pm 5.83$ \\
+ & SwinV2-Tiny & {\boldmath $97.63 \pm 1.26$} & {\boldmath $94.65 \pm 2.20$} & {\boldmath $98.94 \pm 0.88$} & {\boldmath $99.47 \pm 0.15$} & {\boldmath $81.17 \pm 5.23$} \\
+\bottomrule
+\end{tabular*}
+\par\vspace{3pt}
+\endgroup
+\end{table*}
+
+\begin{table*}[!t]
+\centering
+\caption{Paired TAR changes at 1\% FAR ($\Delta\mathrm{TAR}=\mathrm{TAR}_{\mathrm{after}}-\mathrm{TAR}_{\mathrm{before}}$ in percentage points). Reported as mean $\pm$ SD across three seeds. Positive values indicate improvement. Regional occlusions use a separate matched population.}
+\label{tab:supp-tar1-deltas}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.02}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccccc@{}}
+\toprule
+& & \multicolumn{3}{c}{Internal Datasets} & \multicolumn{2}{c}{External Datasets} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-7}
+Input change / control & Architecture & CUST-Iris & CASIA-Interval & IITD & AMF & UTIRIS-NIR \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Polar Input Swaps.}} \\
+\multirow{2}{*}{C1 $\to$ C2} & ResNet-18 & $-0.21\pm0.75$ & $-1.72\pm3.46$ & $-0.11\pm0.97$ & $+0.99\pm0.77$ & $+0.69\pm2.27$ \\
+ & SwinV2-Tiny & $+0.21\pm0.40$ & $-0.89\pm0.75$ & $0.00\pm0.00$ & $+0.07\pm0.23$ & $+0.58\pm1.19$ \\
+\multirow{2}{*}{C2 $\to$ C1} & ResNet-18 & $+0.05\pm0.46$ & $+1.18\pm2.50$ & $-0.58\pm1.43$ & $-1.02\pm1.38$ & $-0.04\pm0.95$ \\
+ & SwinV2-Tiny & $-0.47\pm0.42$ & $+0.02\pm0.95$ & $+0.69\pm0.56$ & $-0.33\pm0.51$ & $-2.50\pm4.21$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Matched Occlusions: Iris Minus Periocular.}} \\
+\multirow{2}{*}{5\% target, left} & ResNet-18 & $-0.87\pm0.46$ & $-0.64\pm1.24$ & $0.00\pm0.00$ & $+0.04\pm0.06$ & $-1.41\pm1.16$ \\
+ & SwinV2-Tiny & $+0.06\pm0.10$ & $+0.13\pm0.97$ & $-0.14\pm0.24$ & $-0.22\pm0.11$ & $-0.88\pm0.67$ \\
+\multirow{2}{*}{5\% target, right} & ResNet-18 & $-0.47\pm0.44$ & $-0.77\pm0.77$ & $0.00\pm0.42$ & $-0.85\pm0.67$ & $-3.78\pm2.19$ \\
+ & SwinV2-Tiny & $0.00\pm0.17$ & $+0.13\pm0.97$ & $-0.14\pm0.24$ & $-0.11\pm0.00$ & $-1.60\pm0.89$ \\
+\multirow{2}{*}{10\% target, left} & ResNet-18 & $-0.52\pm0.87$ & $-2.82\pm1.24$ & $+0.42\pm0.42$ & $-0.11\pm0.38$ & $-1.95\pm0.30$ \\
+ & SwinV2-Tiny & $-0.64\pm0.20$ & $-0.26\pm0.89$ & $0.00\pm0.00$ & $-0.22\pm0.19$ & $-1.68\pm1.45$ \\
+\multirow{2}{*}{10\% target, right} & ResNet-18 & $-0.58\pm0.36$ & $-1.15\pm0.67$ & $0.00\pm0.42$ & $-0.40\pm0.78$ & $-4.43\pm2.93$ \\
+ & SwinV2-Tiny & $+0.12\pm0.20$ & $-0.13\pm0.80$ & $-0.14\pm0.24$ & $-0.33\pm0.38$ & $-2.60\pm2.00$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Raw Trained Checkpoints. TAR@1\% change is relative to original input A.}} \\
+\multirow{2}{*}{A $\to$ B1, black} & ResNet-18 & $-24.29\pm1.25$ & $-27.85\pm7.18$ & $-5.15\pm1.08$ & $-10.05\pm2.13$ & $-30.16\pm1.31$ \\
+ & SwinV2-Tiny & $-27.13\pm3.92$ & $-21.93\pm8.95$ & $-2.92\pm0.93$ & $-6.63\pm1.94$ & $-20.81\pm5.02$ \\
+\multirow{2}{*}{A $\to$ B2, black} & ResNet-18 & $-30.97\pm0.33$ & $-37.55\pm3.56$ & $-5.15\pm0.51$ & $-13.23\pm2.11$ & $-29.58\pm3.05$ \\
+ & SwinV2-Tiny & $-29.13\pm4.51$ & $-22.10\pm10.89$ & $-3.87\pm1.44$ & $-7.82\pm2.42$ & $-20.08\pm3.89$ \\
+\multirow{2}{*}{A $\to$ B1, mean} & ResNet-18 & $-21.71\pm2.68$ & $-19.22\pm2.70$ & $-5.36\pm1.20$ & $-11.82\pm0.65$ & $-33.98\pm3.14$ \\
+ & SwinV2-Tiny & $-16.19\pm2.06$ & $-22.35\pm7.81$ & $-1.65\pm0.56$ & $-8.24\pm1.43$ & $-15.78\pm9.37$ \\
+\multirow{2}{*}{A $\to$ B2, mean} & ResNet-18 & $-23.19\pm3.83$ & $-17.12\pm1.37$ & $-5.68\pm1.48$ & $-12.87\pm1.42$ & $-30.53\pm3.52$ \\
+ & SwinV2-Tiny & $-16.25\pm2.48$ & $-21.83\pm7.04$ & $-2.87\pm1.15$ & $-7.22\pm2.38$ & $-16.36\pm6.23$ \\
+\multirow{2}{*}{A $\to$ complement, black} & ResNet-18 & $-2.84\pm0.55$ & $-17.02\pm1.78$ & $-4.35\pm0.75$ & $-2.59\pm0.69$ & $-20.88\pm3.56$ \\
+ & SwinV2-Tiny & $-3.47\pm1.25$ & $-12.56\pm2.85$ & $-3.08\pm2.25$ & $-1.71\pm0.82$ & $-13.62\pm5.63$ \\
+\multirow{2}{*}{A $\to$ complement, mean} & ResNet-18 & $-2.52\pm1.38$ & $-14.63\pm3.29$ & $-3.77\pm0.75$ & $-1.74\pm0.89$ & $-16.80\pm4.86$ \\
+ & SwinV2-Tiny & $-3.79\pm0.83$ & $-10.10\pm2.14$ & $-3.61\pm1.21$ & $-1.48\pm0.74$ & $-9.37\pm4.47$ \\
+% BEGIN E4 ROWS
+\midrule
+\multicolumn{7}{@{}l}{\textit{Complement Only Training: TAR@1\% change relative to raw A baseline.}} \\
+\multirow{2}{*}{Complement trained/tested} & ResNet-18 & $-3.21\pm1.05$ & $-5.94\pm3.98$ & $-1.54\pm1.04$ & $-1.48\pm1.49$ & $-10.88\pm2.13$ \\
+ & SwinV2-Tiny & $-1.47\pm2.30$ & $-5.69\pm6.29$ & $+1.27\pm0.99$ & $-1.22\pm0.99$ & $+1.77\pm9.46$ \\
+% END E4 ROWS
+\midrule
+\multicolumn{7}{@{}l}{\textit{Binary Mask Substitution. TAR@1\% change is relative to grayscale input.}} \\
+\multirow{2}{*}{B1: grayscale $\to$ binary} & ResNet-18 & $-59.04\pm2.56$ & $-66.67\pm5.54$ & $-19.21\pm0.64$ & $-38.49\pm1.39$ & $-57.94\pm2.13$ \\
+ & SwinV2-Tiny & $-83.33\pm2.45$ & $-85.00\pm3.08$ & $-75.74\pm9.82$ & $-71.66\pm9.61$ & $-69.54\pm4.49$ \\
+\multirow{2}{*}{B2: grayscale $\to$ binary} & ResNet-18 & $-61.15\pm3.47$ & $-45.21\pm5.86$ & $-9.77\pm2.02$ & $-34.12\pm1.24$ & $-50.41\pm4.04$ \\
+ & SwinV2-Tiny & $-79.44\pm3.97$ & $-63.41\pm7.45$ & $-47.61\pm7.66$ & $-60.07\pm3.26$ & $-64.03\pm3.74$ \\
+% BEGIN E3 ROWS
+\midrule
+\multicolumn{7}{@{}l}{\textit{Binary Mask Training: TAR@1\% change relative to grayscale baseline.}} \\
+\multirow{2}{*}{B1: binary trained/tested} & ResNet-18 & $-27.81\pm0.95$ & $-35.90\pm3.14$ & $-1.96\pm1.90$ & $-41.61\pm1.51$ & $-46.46\pm4.93$ \\
+ & SwinV2-Tiny & $-38.80\pm3.29$ & $-43.21\pm4.04$ & $-4.67\pm1.12$ & $-43.68\pm8.78$ & $-46.63\pm4.92$ \\
+\multirow{2}{*}{B2: binary trained/tested} & ResNet-18 & $-32.23\pm2.24$ & $-23.65\pm4.88$ & $-2.07\pm2.35$ & $-33.66\pm4.51$ & $-41.86\pm4.58$ \\
+ & SwinV2-Tiny & $-37.01\pm2.00$ & $-28.63\pm3.94$ & $-4.51\pm1.90$ & $-35.53\pm1.71$ & $-46.83\pm2.16$ \\
+
+\bottomrule
+\end{tabular*}
+\par\vspace{3pt}
+\endgroup
+\end{table*}

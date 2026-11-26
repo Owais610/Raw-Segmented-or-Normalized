@@ -1,0 +1,13 @@
+{
+  "name": "complement_mean_resnet18_seed42",
+  "architecture": "ResNet-18",
+  "seed": 42,
+  "selected_epoch": 66,
+  "completed_epoch": 91,
+  "best_macro_validation_eer": 0.019984628504472735,
+  "checkpoint_sha256": "0345b4b39f464af12af7bdfc1bf4614217216ec0b8d170dbaf9e726b98c82a29",
+  "status": "early_stopped",
+  "run_id": "80a66d5f83b04b63b1da74a885dd06c0",
+  "history_sha256": "76306d5e9666120bc19c88c28b6e555e42b6c212ff23f8243b259b1eb2ab7f2e",
+  "curves_sha256": "d8bb71fe554b830f6120a8b03e1e2c68a393e86585f5fe20f10644917fe5245b"
+}

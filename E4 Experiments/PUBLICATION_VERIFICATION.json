@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "notebooks_static_checked": 25,
+  "new_notebooks_fresh_kernel_checks": [
+    {
+      "notebook": "E4 Experiments/Training Codes/ResNet-18_Complement.ipynb",
+      "status": "PASS",
+      "seconds": 7.32,
+      "code_cells": 25
+    },
+    {
+      "notebook": "E4 Experiments/Evaluation.ipynb",
+      "status": "PASS",
+      "seconds": 7.53,
+      "code_cells": 16
+    },
+    {
+      "notebook": "E4 Experiments/Training Codes/SwinV2-Tiny_Complement.ipynb",
+      "status": "PASS",
+      "seconds": 6.67,
+      "code_cells": 25
+    }
+  ],
+  "training_histories": {
+    "E1": 30,
+    "E3": 12,
+    "E4": 6
+  },
+  "e4_epochs_replayed": 409,
+  "selected_checkpoint_entries": 48,
+  "e4_checkpoint_hashes_verified": 6,
+  "e4_summary_fields_verified": 400,
+  "input_unit_tests_passed": 5,
+  "numerical_replay": {
+    "status": "PASS",
+    "public_e4_evaluations_replayed": 30,
+    "metric_values_checked": 120,
+    "maximum_absolute_difference": 0.0,
+    "unchanged_e1_function_definitions_checked": 136,
+    "new_training": false,
+    "new_recognition_inference": false
+  },
+  "submitted_pdf_mean_sd_cells_checked": 660,
+  "no_new_training": true,
+  "no_new_recognition_inference": true,
+  "original_experimental_artifacts_modified": false,
+  "existing_scientific_repo_files_preserved": true,
+  "relative_documentation_links_verified": 481,
+  "new_curated_files": 60,
+  "new_curated_bytes": 3503137
+}

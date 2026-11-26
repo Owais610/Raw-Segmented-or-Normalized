@@ -22,3 +22,7 @@ See [asset setup](../ASSETS.md), [executed checks](../VALIDATION.md) and [projec
 Frozen B1/B2 models are also tested with binary mask geometry only in **[E2-G](../E2%20Experiments/E2-G/REPORT.md)**; all three seeds and matched datasets are retained.
 
 **E3 trains this architecture directly on those binary supports.** See [B1-binary code](../E3%20Experiments/Training%20Codes/ResNet-18_B1-binary.ipynb), [B2-binary code](../E3%20Experiments/Training%20Codes/ResNet-18_B2-binary.ipynb), [six completed histories](../E3%20Experiments/Training%20Histories/ResNet-18), and the [matched E1/E2/E3 comparison](../E3%20Experiments/README.md). E3 uses independent pretrained initialization and explicitly disables photometric augmentation; these are separate runs from the original grayscale checkpoints.
+
+## Complement-only training
+
+The independently trained [E4 ResNet-18 notebook](../E4%20Experiments/Training%20Codes/ResNet-18_Complement.ipynb), [three original histories](../E4%20Experiments/Training%20Histories/ResNet-18) and [matched evaluation report](../E4%20Experiments/REPORT.md) complete this architecture's 24 training runs. See [all manuscript tables](../Manuscript%20Tables/README.md).

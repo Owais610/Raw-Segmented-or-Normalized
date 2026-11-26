@@ -1,5 +1,7 @@
 # Reproducibility-package validation
 
+**26 November 2026 submission audit:** [E4 validation](E4%20Experiments/VALIDATION.md) documents the six completed complement runs and publication checks. [Complete paper tables](Manuscript%20Tables/README.md) include all reported experiments and the TAR@1% supplement. Earlier E1/E2/E3 verification records below are retained.
+
 **21 November 2026 E3 addition:** see the separate [E3 validation report](E3%20Experiments/VALIDATION.md) for the twelve completed binary-mask training runs, matched evaluations, five fresh-kernel notebook checks, unit tests and independent numerical replay. The original E1/E2 validation record below is preserved.
 
 Executed on **16 November 2026**, Python 3.11, the pinned package environment, NVIDIA RTX 5060 Laptop GPU (8 GB).
